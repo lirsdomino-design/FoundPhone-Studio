@@ -1,5 +1,7 @@
 import type { Work } from '../schema';
 import openingBatch from '../../stories/childhood/locales/opening-batch.json';
+import weekOneBatch from '../../stories/childhood/locales/week-one-batch.json';
+import novemberOpeningBatch from '../../stories/childhood/locales/november-opening-batch.json';
 
 export const storyLocales = {
   ja: '日本語',
@@ -12,7 +14,7 @@ export type StoryTranslations = Record<string, string>;
 
 export function openingTranslations(work: Work, locale: StoryLocale): StoryTranslations {
   const column = Object.keys(storyLocales).indexOf(locale) + 1;
-  const dictionary = new Map(openingBatch.rows.map(row => [row[0], row[column]]));
+  const dictionary = new Map([...openingBatch.rows,...weekOneBatch.rows,...novemberOpeningBatch.rows].map(row => [row[0], row[column]]));
   return Object.fromEntries(Object.entries(translationEntries(work))
     .filter(([,source]) => dictionary.has(source))
     .map(([key,source]) => [key,dictionary.get(source)!]));
