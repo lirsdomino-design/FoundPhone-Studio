@@ -1,6 +1,7 @@
 import { NativeComposer } from "./DeviceSystem";
 import { useSkinState } from "./skinState";
 import { useState } from "react";
+import type { ReactNode } from "react";
 import {
   ChevronLeft,
   Plus,
@@ -33,6 +34,7 @@ import {
 } from "lucide-react";
 import { safeMedia, type Item, type UiValue } from "./schema";
 export type SkinProps = {
+  storyReply?: ReactNode;
   ui?: Record<string, UiValue>;
   onUi?: (key: string, value: UiValue) => void;
   appId?: string;

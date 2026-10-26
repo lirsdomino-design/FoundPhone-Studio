@@ -95,7 +95,7 @@ export function MymyKakao(p: SkinProps) {
           return [];
         }
       }),
-    ],
+    ].sort((a, b) => (p.storyReply ? a.time.localeCompare(b.time) : 0)),
     scroll = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const node = scroll.current;
@@ -126,6 +126,14 @@ export function MymyKakao(p: SkinProps) {
                     (run.first ? " first" : "")
                   }
                 >
+                  {p.storyReply &&
+                    (i === 0 ||
+                      m.time.slice(0, 10) !==
+                        messages[i - 1].time.slice(0, 10)) && (
+                      <time className="story-chat-date">
+                        {m.time.slice(0, 10)}
+                      </time>
+                    )}
                   {!m.outgoing && run.first && (
                     <>
                       <div className="kzmav">
@@ -155,46 +163,48 @@ export function MymyKakao(p: SkinProps) {
             })}
             {!messages.length && <Blank />}
           </div>
-          <form
-            className="kzinp"
-            onSubmit={(e) => {
-              e.preventDefault();
-              if (draft.trim()) {
-                setSent([
-                  ...sent,
-                  JSON.stringify([
-                    p.thread,
-                    draft.trim(),
-                    p.virtualTime || "09:41",
-                  ]),
-                ]);
-                setDraft("");
-              }
-            }}
-          >
-            <button
-              type="button"
-              aria-label="添加聊天内容"
-              onClick={() => (p.creator ? p.onAdd() : setMenu(!menu))}
+          {p.storyReply || (
+            <form
+              className="kzinp"
+              onSubmit={(e) => {
+                e.preventDefault();
+                if (draft.trim()) {
+                  setSent([
+                    ...sent,
+                    JSON.stringify([
+                      p.thread,
+                      draft.trim(),
+                      p.virtualTime || "09:41",
+                    ]),
+                  ]);
+                  setDraft("");
+                }
+              }}
             >
-              <Plus size={21} />
-            </button>
-            <input
-              aria-label="KKT消息"
-              placeholder="输入消息"
-              value={draft}
-              maxLength={2000}
-              onChange={(e) => setDraft(e.target.value)}
-            />
-            <Smile size={22} />
-            <button
-              className={draft.trim() ? "go" : ""}
-              aria-label="发送KKT消息"
-              disabled={!draft.trim()}
-            >
-              ↑
-            </button>
-          </form>
+              <button
+                type="button"
+                aria-label="添加聊天内容"
+                onClick={() => (p.creator ? p.onAdd() : setMenu(!menu))}
+              >
+                <Plus size={21} />
+              </button>
+              <input
+                aria-label="KKT消息"
+                placeholder="输入消息"
+                value={draft}
+                maxLength={2000}
+                onChange={(e) => setDraft(e.target.value)}
+              />
+              <Smile size={22} />
+              <button
+                className={draft.trim() ? "go" : ""}
+                aria-label="发送KKT消息"
+                disabled={!draft.trim()}
+              >
+                ↑
+              </button>
+            </form>
+          )}
           {menu && (
             <div className="mymy-local-menu">
               <strong>{p.thread}</strong>

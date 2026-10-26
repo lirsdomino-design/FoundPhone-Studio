@@ -283,9 +283,9 @@ export function NativeSettings({
               <ChevronRight size={16} />
             </button>
           ))}
-        {creator && (
+        {(creator || onSettings) && (
           <button className="phone-add" onClick={onSettings}>
-            编辑系统配置
+            {creator ? "编辑系统配置" : "手机外观与个人设置"}
           </button>
         )}
       </NavigationPage>

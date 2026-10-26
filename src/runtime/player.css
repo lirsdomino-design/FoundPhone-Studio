@@ -8,6 +8,72 @@
   overflow: hidden;
   background: #111113;
 }
+.wallpaper-custom .wallpaper-orb {
+  display: none;
+}
+.story-message-shortcut {
+  position: absolute;
+  z-index: 54;
+  left: 16px;
+  right: 16px;
+  bottom: 100px;
+  padding: 13px;
+  border: 1px solid #ffffffa0;
+  border-radius: 18px;
+  background: #fff9;
+  backdrop-filter: blur(18px);
+  color: #252627;
+  font-size: 14px;
+}
+.story-inline-replies {
+  flex: 0 0 auto;
+  max-height: 34%;
+  overflow: auto;
+  padding: 10px 14px 18px;
+  background: #f6f6f7;
+  color: #242424;
+  border-top: 1px solid #c7d2dc;
+}
+.story-inline-replies summary {
+  font-size: 12px;
+  color: #64717b;
+  cursor: pointer;
+  padding: 5px 0;
+}
+.story-chat-date {
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #596b78;
+  font-size: 11px;
+  margin: 16px 0;
+}
+.story-inline-replies button {
+  display: block;
+  width: 100%;
+  border: 0;
+  border-radius: 14px;
+  margin-top: 7px;
+  padding: 11px 13px;
+  background: #fee45b;
+  color: #242424;
+  text-align: left;
+  font: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.story-reply-overlay {
+  max-height: 36%;
+  overflow: auto;
+  padding: 12px;
+}
+.story-overlay.ending:not([open]) > :not(summary) {
+  display: none;
+}
+.story-overlay.ending summary {
+  cursor: pointer;
+  font-size: 13px;
+}
 .story-runtime .phone-stage {
   width: 100%;
   height: 100%;

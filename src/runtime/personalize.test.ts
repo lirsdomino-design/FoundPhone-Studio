@@ -28,8 +28,12 @@ describe("player personalization", () => {
       language: "both",
       passcode: "",
     });
-    expect(work.data.twitter[0].body).toContain("연습 끝");
-    expect(work.data.twitter[0].body).toContain("翻译：");
+    const translated = Object.values(work.data)
+      .flat()
+      .find((i) => i.meta.translationZh);
+    expect(translated).toBeDefined();
+    expect(translated?.body).toContain("翻译：");
+    expect(translated?.body).toContain(translated?.meta.translationZh);
   });
   it("rejects invalid profile values", () => {
     expect(

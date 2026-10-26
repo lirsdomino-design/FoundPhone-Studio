@@ -318,7 +318,16 @@ function PhoneRuntime({
     >
       <KeyboardContext.Provider value={setKeyboard}>
         <div
-          className={`phone-screen wallpaper-${work.phone.wallpaper} ${locked ? "is-locked" : ""} ${app ? "in-app" : ""} ${keyboard ? "keyboard-open" : ""}`}
+          className={`phone-screen wallpaper-${safeMedia(work.phone.wallpaper) ? "custom" : work.phone.wallpaper} ${locked ? "is-locked" : ""} ${app ? "in-app" : ""} ${keyboard ? "keyboard-open" : ""}`}
+          style={
+            safeMedia(work.phone.wallpaper)
+              ? {
+                  backgroundImage: `linear-gradient(#0002,#0003), url("${safeMedia(work.phone.wallpaper)}")`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }
+              : undefined
+          }
           data-app={app}
           onDragStart={(e) => e.preventDefault()}
           onPointerDown={(e) => {
@@ -452,6 +461,9 @@ function PhoneRuntime({
                   ]}
                   creator={creator}
                   state={s}
+                  onChoose={(target) =>
+                    update(choose(work, runtimeRef.current, target))
+                  }
                   onRead={(id) => event("read", id)}
                   onEdit={(item) => onEdit?.(app, item)}
                   onAdd={() => onAdd?.(app)}
@@ -577,23 +589,43 @@ function PhoneRuntime({
               )}
             </div>
           )}
-          {!creator && s.choices.length > 0 && !locked && (
-            <div className="story-overlay">
-              <span className="eyebrow">故事来到一个岔路口</span>
-              <h3>你会如何选择？</h3>
-              {s.choices.map((c) => (
-                <button
-                  key={c.target}
-                  onClick={() => update(choose(work, s, c.target))}
-                >
-                  {c.label}
-                  <ArrowUp size={15} />
-                </button>
-              ))}
-            </div>
-          )}
+          {!creator &&
+            s.choices.length > 0 &&
+            !locked &&
+            work.id === "baekhyun-childhood-phone" &&
+            app !== s.variables.storyApp && (
+              <button
+                className="story-message-shortcut"
+                onClick={() => open(String(s.variables.storyApp || "kakao"))}
+              >
+                {s.variables.storyApp === "kakao"
+                  ? `${String(s.variables.storyThread)} · 查看消息与回复`
+                  : "查看今天的动态与讨论"}
+              </button>
+            )}
+          {!creator &&
+            s.choices.length > 0 &&
+            !locked &&
+            (work.id !== "baekhyun-childhood-phone" ||
+              (app === s.variables.storyApp && app !== "kakao")) && (
+              <div className="story-overlay story-reply-overlay">
+                <span className="eyebrow">选择回复或继续浏览</span>
+                {s.choices.map((c) => (
+                  <button
+                    key={c.target}
+                    onClick={() => update(choose(work, s, c.target))}
+                  >
+                    {c.label}
+                    <ArrowUp size={15} />
+                  </button>
+                ))}
+              </div>
+            )}
           {!creator && s.endings.length > 0 && !locked && (
-            <div className="story-overlay ending">
+            <details className="story-overlay ending" style={{ top: "auto" }}>
+              <summary>
+                已完成：{s.endings[s.endings.length - 1]} · 查看结局
+              </summary>
               <span className="eyebrow">ENDING · {s.endings.length}</span>
               <h2>故事在这里停泊。</h2>
               <p>{s.endings[s.endings.length - 1]}</p>
@@ -606,7 +638,7 @@ function PhoneRuntime({
               >
                 重新开始
               </button>
-            </div>
+            </details>
           )}
           {!creator && s.incomingCall && (
             <div className="incoming-call-screen">
@@ -867,6 +899,7 @@ function AppContent({
   onSettings,
   onUi,
   work,
+  onChoose,
 }: {
   app: AppPlugin;
   name: string;
@@ -880,9 +913,22 @@ function AppContent({
   onSettings?: () => void;
   onUi?: (key: string, value: UiValue) => void;
   work: Work;
+  onChoose?: (target: string) => void;
 }) {
   const [detail, setDetail] = useState<Item | null>(null);
   const [thread, setThread] = useState("");
+  const storyThread = String(state.variables.storyThread || "");
+  const storyDay = state.variables.dayIndex;
+  useEffect(() => {
+    if (
+      work.id === "baekhyun-childhood-phone" &&
+      app.id === "kakao" &&
+      state.variables.storyApp === "kakao"
+    ) {
+      setThread(storyThread);
+      setDetail(null);
+    }
+  }, [app.id, storyThread, storyDay, state.variables.storyApp, work.id]);
   const [tab, setTab] = useState(app.tabs[0]);
   const [q, setQ] = useState("");
   const [pw, setPw] = useState("");
@@ -986,6 +1032,41 @@ function AppContent({
         <div className="catalog-slot" hidden={!!detail}>
           <Suspense fallback={<div className="catalog-loading">正在打开…</div>}>
             <Skin
+              storyReply={
+                work.id === "baekhyun-childhood-phone" &&
+                app.id === "kakao" &&
+                state.variables.storyApp === "kakao" &&
+                thread === storyThread ? (
+                  <details
+                    className="story-inline-replies"
+                    key={state.choices.map((c) => c.target).join("-")}
+                    open
+                  >
+                    <summary>选择回复 · {state.date}</summary>
+                    {state.choices.map((c) => (
+                      <button
+                        key={c.target}
+                        onClick={() => onChoose?.(c.target)}
+                      >
+                        {c.label}
+                      </button>
+                    ))}
+                    {!state.choices.length && (
+                      <small>今天的聊天已保存在这部手机里。</small>
+                    )}
+                  </details>
+                ) : work.id === "baekhyun-childhood-phone" &&
+                  app.id === "kakao" ? (
+                  <div className="story-inline-replies">
+                    <small>这里保留已发生的聊天。</small>
+                    {state.variables.storyApp === "kakao" && (
+                      <button onClick={() => setThread(storyThread)}>
+                        查看{storyThread}的当前消息
+                      </button>
+                    )}
+                  </div>
+                ) : undefined
+              }
               appId={app.id}
               owner={work.phone.owner}
               virtualTime={state.time}
