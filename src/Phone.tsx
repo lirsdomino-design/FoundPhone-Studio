@@ -254,10 +254,10 @@ function PhoneRuntime({
           for (const node of work.nodes)
             for (const action of node.actions)
               if (action.type === "choice") {
-                const list = labelsByTarget.get(action.target) ?? [];
+                const list = labelsByTarget.get(action.key) ?? [];
                 if (!list.includes(String(action.value)))
                   list.push(String(action.value));
-                labelsByTarget.set(action.target, list);
+                labelsByTarget.set(action.key, list);
               }
           const choiceText = (choice: { label: string; target: string }) => {
             const candidates = labelsByTarget.get(choice.target);
