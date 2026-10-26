@@ -63,13 +63,20 @@ function WidgetFace({
   time: string;
 }) {
   const date = new Date((work.phone.date || "2026-10-25") + "T12:00:00Z");
+  const displayLocale = String(work.variables.displayLocale ?? "zh");
+  const intlLocale =
+    displayLocale === "zh"
+      ? "zh-CN"
+      : displayLocale === "yue-Hant-HK-MO"
+        ? "zh-HK"
+        : displayLocale;
   const weather = work.data.weather?.[0];
   return (
     <div className={"widget-face widget-" + widget.type}>
       {widget.type === "calendar" ? (
         <>
           <span className="widget-red">
-            {new Intl.DateTimeFormat("zh-CN", {
+            {new Intl.DateTimeFormat(intlLocale, {
               weekday: "long",
               timeZone: "UTC",
             }).format(date)}

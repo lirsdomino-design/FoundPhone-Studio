@@ -81,6 +81,13 @@ export function DeviceLock({
   onCamera: () => void;
   onLight: () => void;
 }) {
+  const displayLocale = String(work.variables.displayLocale ?? "zh");
+  const intlLocale =
+    displayLocale === "zh"
+      ? "zh-CN"
+      : displayLocale === "yue-Hant-HK-MO"
+        ? "zh-HK"
+        : displayLocale;
   const [code, setCode] = useState("");
   useEffect(() => {
     if (error) setCode("");
@@ -113,7 +120,7 @@ export function DeviceLock({
           <div className="lock-clock-block">
             <LockKeyhole size={18} />
             <p>
-              {new Intl.DateTimeFormat("zh-CN", {
+              {new Intl.DateTimeFormat(intlLocale, {
                 month: "long",
                 day: "numeric",
                 weekday: "long",

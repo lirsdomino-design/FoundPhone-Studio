@@ -64,6 +64,11 @@ import {
 } from "./schema";
 import { dispatch, choose, visible, advance } from "./engine";
 import { db } from "./persistence";
+import {
+  canonicalStoryText,
+  localizeStoredStoryText,
+  type StoryLocale,
+} from "./runtime/story-locales";
 export function AppIcon({
   id,
   name,
@@ -203,17 +208,98 @@ function PhoneRuntime({
       .get(work.id)
       .then((saved) => {
         if (!active) return;
-        if (saved && saved.state.revision === work.updatedAt)
-          setOwn({...saved.state,variables:{...saved.state.variables,pacedDelivery:work.id === "baekhyun-childhood-phone"}});
-        else {
-          const initial=initialRuntime(work);initial.variables.pacedDelivery=work.id === "baekhyun-childhood-phone";
+        if (saved && saved.state.revision === work.updatedAt) {
+          const locale = (work.variables.displayLocale ?? "zh") as
+            StoryLocale | "zh";
+          const text = (value: string) =>
+            localizeStoredStoryText(value, locale)
+              .replace(/\{\{player\}\}/g, work.phone.owner)
+              .replace(
+                /\{\{(weekdelta|daydelta):(-?\d+)\}\}/g,
+                (_, kind, delta) => {
+                  const date = new Date(
+                    Date.parse(
+                      (work.phone.date || "2026-10-26") + "T12:00:00Z",
+                    ) +
+                      Number(delta) * 86400000,
+                  );
+                  if (kind === "weekdelta")
+                    return locale === "ja"
+                      ? [
+                          "日曜日",
+                          "月曜日",
+                          "火曜日",
+                          "水曜日",
+                          "木曜日",
+                          "金曜日",
+                          "土曜日",
+                        ][date.getUTCDay()]
+                      : locale === "ko"
+                        ? [
+                            "일요일",
+                            "월요일",
+                            "화요일",
+                            "수요일",
+                            "목요일",
+                            "금요일",
+                            "토요일",
+                          ][date.getUTCDay()]
+                        : "星期" + "日一二三四五六"[date.getUTCDay()];
+                  return locale === "ko"
+                    ? `${date.getUTCMonth() + 1}월 ${date.getUTCDate()}일`
+                    : `${date.getUTCMonth() + 1}月${date.getUTCDate()}日`;
+                },
+              );
+          const labelsByTarget = new Map<string, string[]>();
+          for (const node of work.nodes)
+            for (const action of node.actions)
+              if (action.type === "choice") {
+                const list = labelsByTarget.get(action.target) ?? [];
+                if (!list.includes(String(action.value)))
+                  list.push(String(action.value));
+                labelsByTarget.set(action.target, list);
+              }
+          const choiceText = (choice: { label: string; target: string }) => {
+            const candidates = labelsByTarget.get(choice.target);
+            const canonical = canonicalStoryText(choice.label);
+            return (
+              candidates?.find(
+                (candidate) => canonicalStoryText(candidate) === canonical,
+              ) ??
+              (candidates?.length === 1 ? candidates[0] : text(choice.label))
+            );
+          };
+          setOwn({
+            ...saved.state,
+            variables: {
+              ...saved.state.variables,
+              displayLocale: locale,
+              pacedDelivery: work.id === "baekhyun-childhood-phone",
+            },
+            choices: saved.state.choices.map((choice) => ({
+              ...choice,
+              label: choiceText(choice),
+            })),
+            deferredChoices: saved.state.deferredChoices?.map((choice) => ({
+              ...choice,
+              label: choiceText(choice),
+            })),
+            notifications: saved.state.notifications.map(text),
+            endings: saved.state.endings.map(text),
+          });
+        } else {
+          const initial = initialRuntime(work);
+          initial.variables.pacedDelivery =
+            work.id === "baekhyun-childhood-phone";
           setOwn(dispatch(work, initial, "start"));
           if (saved) setLoadError("作品已更新，已开始新的进度。");
         }
         setReady(true);
       })
       .catch(() => {
-        const initial=initialRuntime(work);initial.variables.pacedDelivery=work.id === "baekhyun-childhood-phone";
+        const initial = initialRuntime(work);
+        initial.variables.pacedDelivery =
+          work.id === "baekhyun-childhood-phone";
         setOwn(dispatch(work, initial, "start"));
         setLoadError("无法读取本地存档。本次仍可游玩。");
         setReady(true);
@@ -624,25 +710,28 @@ function PhoneRuntime({
                 ))}
               </div>
             )}
-          {!creator && s.endings.length > 0 && !s.deliveryQueue?.length && !locked && (
-            <details className="story-overlay ending" style={{ top: "auto" }}>
-              <summary>
-                已完成：{s.endings[s.endings.length - 1]} · 查看结局
-              </summary>
-              <span className="eyebrow">ENDING · {s.endings.length}</span>
-              <h2>故事在这里停泊。</h2>
-              <p>{s.endings[s.endings.length - 1]}</p>
-              <button
-                onClick={() => {
-                  update(dispatch(work, initialRuntime(work), "start"));
-                  setApp("");
-                  setLocked(true);
-                }}
-              >
-                重新开始
-              </button>
-            </details>
-          )}
+          {!creator &&
+            s.endings.length > 0 &&
+            !s.deliveryQueue?.length &&
+            !locked && (
+              <details className="story-overlay ending" style={{ top: "auto" }}>
+                <summary>
+                  已完成：{s.endings[s.endings.length - 1]} · 查看结局
+                </summary>
+                <span className="eyebrow">ENDING · {s.endings.length}</span>
+                <h2>故事在这里停泊。</h2>
+                <p>{s.endings[s.endings.length - 1]}</p>
+                <button
+                  onClick={() => {
+                    update(dispatch(work, initialRuntime(work), "start"));
+                    setApp("");
+                    setLocked(true);
+                  }}
+                >
+                  重新开始
+                </button>
+              </details>
+            )}
           {!creator && s.incomingCall && (
             <div className="incoming-call-screen">
               <small>
@@ -1055,7 +1144,11 @@ function AppContent({
                       </button>
                     ))}
                     {!state.choices.length && (
-                      <small>{state.deliveryQueue?.length ? "正在输入…" : "今天的聊天已保存在这部手机里。"}</small>
+                      <small>
+                        {state.deliveryQueue?.length
+                          ? "正在输入…"
+                          : "今天的聊天已保存在这部手机里。"}
+                      </small>
                     )}
                   </details>
                 ) : work.id === "baekhyun-childhood-phone" &&

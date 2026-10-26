@@ -1,4 +1,11 @@
 import { validateWork, type Work } from "../schema";
+import {
+  completeTranslations,
+  translateStory,
+  sourceTranslator,
+  storyLocales,
+  type StoryLocale,
+} from "./story-locales";
 
 export type PlayerProfile = {
   name: string;
@@ -6,6 +13,7 @@ export type PlayerProfile = {
   language: "zh" | "both";
   passcode: string;
   wallpaper?: string;
+  locale?: StoryLocale | "zh";
 };
 export const PROFILE_KEY = "baekhyun-childhood-profile-v3";
 export function localToday() {
@@ -22,6 +30,7 @@ export function validProfile(p: unknown): p is PlayerProfile {
     /^\d{4}-\d{2}-\d{2}$/.test(v.startDate) &&
     !Number.isNaN(Date.parse(v.startDate + "T12:00:00Z")) &&
     ["zh", "both"].includes(v.language) &&
+    (v.locale === undefined || v.locale === "zh" || v.locale in storyLocales) &&
     typeof v.passcode === "string" &&
     /^(\d{4})?$/.test(v.passcode) &&
     (v.wallpaper === undefined ||
@@ -33,6 +42,11 @@ export function validProfile(p: unknown): p is PlayerProfile {
   );
 }
 export function personalizeWork(source: Work, profile: PlayerProfile): Work {
+  const locale = profile.locale ?? "zh";
+  const localizedSource =
+    locale === "zh"
+      ? source
+      : translateStory(source, completeTranslations(source, locale));
   const dayMs = 86400000;
   const shift = Math.round(
     (Date.parse(profile.startDate + "T12:00:00Z") -
@@ -55,8 +69,30 @@ export function personalizeWork(source: Work, profile: PlayerProfile): Work {
               Number(delta) * dayMs,
           );
           return kind === "weekdelta"
-            ? "星期" + "日一二三四五六"[d.getUTCDay()]
-            : `${d.getUTCMonth() + 1}月${d.getUTCDate()}日`;
+            ? locale === "ja"
+              ? [
+                  "日曜日",
+                  "月曜日",
+                  "火曜日",
+                  "水曜日",
+                  "木曜日",
+                  "金曜日",
+                  "土曜日",
+                ][d.getUTCDay()]
+              : locale === "ko"
+                ? [
+                    "일요일",
+                    "월요일",
+                    "화요일",
+                    "수요일",
+                    "목요일",
+                    "금요일",
+                    "토요일",
+                  ][d.getUTCDay()]
+                : "星期" + "日一二三四五六"[d.getUTCDay()]
+            : locale === "ko"
+              ? `${d.getUTCMonth() + 1}월 ${d.getUTCDate()}일`
+              : `${d.getUTCMonth() + 1}月${d.getUTCDate()}日`;
         });
     if (Array.isArray(value)) return value.map(transform);
     if (value && typeof value === "object")
@@ -65,18 +101,30 @@ export function personalizeWork(source: Work, profile: PlayerProfile): Work {
       );
     return value;
   };
-  const result = validateWork(transform(source));
+  const result = validateWork(transform(localizedSource));
+  result.variables.displayLocale = locale;
   result.phone.owner = profile.name;
   result.phone.passcode = profile.passcode;
   if (profile.wallpaper) result.phone.wallpaper = profile.wallpaper;
   for (const items of Object.values(result.data))
     for (const item of items) {
       const translation = item.meta.translationZh;
-      if (translation)
+      if (translation && locale === "zh")
         item.body =
           profile.language === "both"
             ? item.body + "\n\n翻译：" + translation
             : translation;
+      else if (translation && locale !== "zh" && profile.language === "both") {
+        const original = source.data[
+          Object.keys(result.data).find((app) => result.data[app] === items)!
+        ]?.find((i) => i.id === item.id)?.body;
+        if (original && original !== item.body)
+          item.body = String(transform(original)) + "\n\n" + item.body;
+      }
     }
+  if (locale !== "zh") {
+    const t = sourceTranslator(locale);
+    for (const node of result.nodes) node.label = t(node.label);
+  }
   return result;
 }

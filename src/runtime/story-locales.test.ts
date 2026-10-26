@@ -1,10 +1,23 @@
 import {describe,it,expect} from 'vitest';
 import {compileStory} from '../story-engine/compiler';
 import raw from '../../stories/template/story.json';
-import {storyLocales,openingTranslations,translationEntries,translationCoverage,translateStory} from './story-locales';
+import {storyLocales,completeTranslations,openingTranslations,translationEntries,translationCoverage,translateStory} from './story-locales';
+import {personalizeWork} from './personalize';
 import type {StoryLocale} from './story-locales';
 const work=compileStory(raw).work;
 describe('story localization safety',()=>{
+  it('covers the full four-month story in every available locale',()=>{
+    for(const locale of Object.keys(storyLocales) as StoryLocale[]){
+      const pack=completeTranslations(work,locale);
+      expect(translationCoverage(work,pack).missing).toEqual([]);
+      expect(translationCoverage(work,pack).invalid).toEqual([]);
+      const localized=personalizeWork(work,{name:'Aoi',startDate:'2026-12-30',language:'zh',locale,passcode:''});
+      expect(localized.phone.owner).toBe('Aoi');
+      expect(localized.data.kakao.find(i=>i.id==='line-1')?.body).not.toContain('{{');
+      expect(localized.nodes.map(n=>n.id)).toEqual(work.nodes.map(n=>n.id));
+      expect(localized.nodes.map(n=>n.conditions)).toEqual(work.nodes.map(n=>n.conditions));
+    }
+  });
   it('preserves calendar tokens in every authored opening language',()=>{
     for(const locale of Object.keys(storyLocales) as StoryLocale[]){
       const pack=openingTranslations(work,locale);
