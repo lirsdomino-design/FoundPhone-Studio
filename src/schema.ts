@@ -153,6 +153,8 @@ export type Runtime = {
   notifications: string[];
   endings: string[];
   choices: { label: string; target: string }[];
+  deliveryQueue?: { id: string; due: number }[];
+  deferredChoices?: { label: string; target: string }[];
   messages: Record<string, Item[]>;
   time: string;
   trace: string[];

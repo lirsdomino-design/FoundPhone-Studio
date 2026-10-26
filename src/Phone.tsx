@@ -204,15 +204,17 @@ function PhoneRuntime({
       .then((saved) => {
         if (!active) return;
         if (saved && saved.state.revision === work.updatedAt)
-          setOwn(saved.state);
+          setOwn({...saved.state,variables:{...saved.state.variables,pacedDelivery:work.id === "baekhyun-childhood-phone"}});
         else {
-          setOwn(dispatch(work, initialRuntime(work), "start"));
+          const initial=initialRuntime(work);initial.variables.pacedDelivery=work.id === "baekhyun-childhood-phone";
+          setOwn(dispatch(work, initial, "start"));
           if (saved) setLoadError("作品已更新，已开始新的进度。");
         }
         setReady(true);
       })
       .catch(() => {
-        setOwn(dispatch(work, initialRuntime(work), "start"));
+        const initial=initialRuntime(work);initial.variables.pacedDelivery=work.id === "baekhyun-childhood-phone";
+        setOwn(dispatch(work, initial, "start"));
         setLoadError("无法读取本地存档。本次仍可游玩。");
         setReady(true);
       });
@@ -234,6 +236,7 @@ function PhoneRuntime({
       runtimeRef.current = next;
       const changed =
         next.time !== previous.time ||
+        next.unlocked.length !== previous.unlocked.length ||
         next.trace.join() !== previous.trace.join() ||
         (next.scheduled?.length ?? 0) !== (previous.scheduled?.length ?? 0) ||
         (next.scheduled?.length ?? 0) > 0 ||
@@ -590,7 +593,7 @@ function PhoneRuntime({
             </div>
           )}
           {!creator &&
-            s.choices.length > 0 &&
+            (s.choices.length > 0 || Boolean(s.deliveryQueue?.length)) &&
             !locked &&
             work.id === "baekhyun-childhood-phone" &&
             app !== s.variables.storyApp && (
@@ -621,7 +624,7 @@ function PhoneRuntime({
                 ))}
               </div>
             )}
-          {!creator && s.endings.length > 0 && !locked && (
+          {!creator && s.endings.length > 0 && !s.deliveryQueue?.length && !locked && (
             <details className="story-overlay ending" style={{ top: "auto" }}>
               <summary>
                 已完成：{s.endings[s.endings.length - 1]} · 查看结局
@@ -1052,7 +1055,7 @@ function AppContent({
                       </button>
                     ))}
                     {!state.choices.length && (
-                      <small>今天的聊天已保存在这部手机里。</small>
+                      <small>{state.deliveryQueue?.length ? "正在输入…" : "今天的聊天已保存在这部手机里。"}</small>
                     )}
                   </details>
                 ) : work.id === "baekhyun-childhood-phone" &&

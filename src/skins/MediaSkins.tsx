@@ -51,7 +51,7 @@ function TrackPlayer({
       {item.kind === "audio" && safeMedia(item.media) ? (
         <AudioPlayer p={p} item={item} />
       ) : (
-        <button onClick={() => p.onItem(item)}>查看</button>
+        <a href={`https://open.spotify.com/search/${encodeURIComponent(item.title+' BAEKHYUN')}`} target="_blank" rel="noopener noreferrer">在 Spotify 搜索 ↗</a>
       )}
       <button aria-label="下一首" onClick={onNext}>
         <SkipForward size={19} />

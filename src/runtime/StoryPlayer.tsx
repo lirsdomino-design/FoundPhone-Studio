@@ -119,17 +119,19 @@ function StoryPlayer() {
               onChange={async (e) => {
                 const f = e.target.files?.[0];
                 if (!f) return;
-                if (
-                  f.size > 1400000 ||
-                  !["image/jpeg", "image/png", "image/webp"].includes(f.type)
-                ) {
-                  setError("请选择小于1.4MB的JPG、PNG或WebP图片。");
+                if (f.size > 20000000 || !f.type.startsWith('image/')) {
+                  setError("请选择小于20MB的图片。");
                   return;
                 }
                 const r = new FileReader();
                 r.onload = () => {
-                  setWallpaper(String(r.result));
-                  setError("");
+                  const image=new Image();
+                  image.onload=()=>{
+                    const canvas=document.createElement('canvas');const scale=Math.min(1,1080/Math.max(image.width,image.height));
+                    canvas.width=Math.round(image.width*scale);canvas.height=Math.round(image.height*scale);
+                    const context=canvas.getContext('2d');if(!context){setError('无法处理这张图片，请换一张。');return;}
+                    context.drawImage(image,0,0,canvas.width,canvas.height);setWallpaper(canvas.toDataURL('image/jpeg',0.82));setError('图片已准备好，请点“应用壁纸”或底部保存按钮。');
+                  };image.onerror=()=>setError('浏览器无法打开该图片，请转成JPG或PNG后再试。');image.src=String(r.result);
                 };
                 r.onerror = () => setError("没有读到图片，请重新选择。");
                 r.readAsDataURL(f);
@@ -150,6 +152,9 @@ function StoryPlayer() {
                 <button type="button" onClick={() => setWallpaper("")}>
                   恢复默认壁纸
                 </button>
+                {profile && <button type="button" onClick={()=>{
+                  const next={...profile,wallpaper};try{localStorage.setItem(PROFILE_KEY,JSON.stringify(next));setProfile(next);setCustomizing(false);}catch{setError('壁纸保存失败，请换一张较小的图片。');}
+                }}>应用壁纸并返回手机</button>}
               </>
             )}
           </label>

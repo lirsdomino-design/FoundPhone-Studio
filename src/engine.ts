@@ -38,6 +38,17 @@ function apply(a: Action, s: Runtime, w: Work) {
       s.variables[a.key] = a.value;
       break;
     case "unlock":
+      if (s.variables.pacedDelivery === true) {
+        const item = w.data.kakao?.find(i=>i.id===a.key);
+        if(item && !s.unlocked.includes(a.key)) {
+          const queue=s.deliveryQueue ??= [];
+          if(queue.some(x=>x.id===a.key)) break;
+          if(!item.outgoing || queue.length) {
+            queue.push({id:a.key,due:Math.max(s.elapsedMs??0,queue.at(-1)?.due??0)+Math.min(2200,650+item.body.length*25)});
+            break;
+          }
+        }
+      }
       if (!s.unlocked.includes(a.key)) s.unlocked.push(a.key);
       break;
     case "hide":
@@ -65,6 +76,11 @@ function apply(a: Action, s: Runtime, w: Work) {
       if (!s.endings.includes(String(a.value))) s.endings.push(String(a.value));
       break;
     case "choice":
+      if(s.deliveryQueue?.length) {
+        s.deferredChoices ??= [];
+        if(!s.deferredChoices.some(c=>c.target===a.key))s.deferredChoices.push({label:String(a.value),target:a.key});
+        break;
+      }
       if (!s.choices.some((c) => c.target === a.key))
         s.choices.push({ label: String(a.value), target: a.key });
       break;
@@ -179,7 +195,9 @@ export function dispatch(
         (n.event === event && (!n.target || n.target === target)),
     )
     .map((n) => n.id);
-  return runQueue(w, s, event, target, queue);
+  const next=runQueue(w, s, event, target, queue);
+  if(next.deliveryQueue?.length && next.choices.length){next.deferredChoices??=[];for(const choice of next.choices)if(!next.deferredChoices.some(c=>c.target===choice.target))next.deferredChoices.push(choice);next.choices=[];}
+  return next;
 }
 export function advance(
   w: Work,
@@ -237,6 +255,12 @@ export function advance(
       continue;
     }
     if (s.elapsedMs >= end) break;
+  }
+  if(s.deliveryQueue?.length){
+    const due=s.deliveryQueue.filter(x=>x.due<=(s.elapsedMs??0));
+    for(const item of due)if(!s.unlocked.includes(item.id))s.unlocked.push(item.id);
+    s.deliveryQueue=s.deliveryQueue.filter(x=>x.due>(s.elapsedMs??0));
+    if(!s.deliveryQueue.length){s.choices.push(...(s.deferredChoices??[]));s.deferredChoices=[];}
   }
   return s;
 }

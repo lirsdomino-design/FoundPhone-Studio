@@ -11,6 +11,8 @@
 .wallpaper-custom .wallpaper-orb {
   display: none;
 }
+.wallpaper-custom .home-screen,.wallpaper-custom .device-lock {background:transparent !important;}
+.track-player a {color:#1db954;font-size:12px;padding:10px;white-space:nowrap;}
 .story-message-shortcut {
   position: absolute;
   z-index: 54;

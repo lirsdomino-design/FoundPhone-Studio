@@ -175,6 +175,9 @@ const script = {
   tests: [],
 };
 const chars = ["伯贤", "允书", "珉澄", "知安"];
+// Fictional posts already on the phone before the playable timeline begins.
+script.content.instagram.push({id:"ig-seed-room",title:"允书",body:"休息室的灯换好了。明天记得从 B 口进，别在外面吹风 ☕",sender:"允书",time:"2026-10-25 18:40",kind:"post",folder:"正在关注",hidden:false,comments:["珉澄：收到，我会把交接表带过去。"],meta:{handle:"@yoonseo_story",fictional:"true"}});
+script.content.twitter.push({id:"x-seed-work",title:"演出记录",body:"明天现场降温，候场区的热饮和备用围巾已经安排上了。辛苦每一位早到的人。",sender:"演出记录",time:"2026-10-25 20:12",kind:"post",folder:"正在关注",hidden:false,comments:["路过的粉丝：希望大家都别着凉。","另一位粉丝：天气预报说明天会很冷，注意保暖。"],meta:{handle:"@stage_note",fictional:"true"}});
 const v = (key, value) => ({ type: "variable", key, value });
 const unlock = (key) => ({ type: "unlock", key, value: true });
 const node = (id, label, extra = {}) => {
@@ -1111,6 +1114,7 @@ for (const [di, path, sender, body] of [
 }
 const roomMedia = mediaFor("stories/childhood/assets/living-room.jpg");
 if (roomMedia) {
+  script.content.instagram.find((x) => x.id === "ig-seed-room").media = roomMedia;
   for (const day of ["11-15", "12-17"]) {
     const di = rows.findIndex((r) => r.day === day);
     const item = script.content.instagram.find(
