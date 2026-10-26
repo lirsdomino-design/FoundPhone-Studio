@@ -1,22 +1,29 @@
 {
   "scriptVersion": 1,
-  "id": "ui-test-phone-v2",
-  "title": "捡手机",
-  "description": "仅用于界面测试，不含剧情",
+  "id": "baekhyun-after-hours",
+  "title": "工作时间之外｜伯贤的手机",
+  "description": "原创虚构互动故事。现实人物不参与游戏；私人对白、行程、帖子与互动均为创作。不连接真实社交服务，不含付费Bubble记录。",
   "revision": 2,
   "phone": {
-    "owner": "机主",
+    "owner": "{{player}}",
     "date": "2026-10-25",
-    "time": "09:41",
-    "battery": 94,
-    "network": "5G",
-    "wallpaper": "apple-wwdc26"
+    "time": "07:30",
+    "wallpaper": "sage",
+    "passcode": ""
   },
   "installedApps": [
-    "appstore",
     {
-      "id": "wechat",
-      "name": "微信",
+      "id": "kakao",
+      "name": "KakaoTalk",
+      "installed": true,
+      "visible": true,
+      "dock": true,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "instagram",
+      "name": "Instagram",
       "installed": true,
       "visible": true,
       "dock": false,
@@ -24,18 +31,95 @@
       "icon": ""
     },
     {
-      "id": "douyin",
-      "name": "抖音",
+      "id": "twitter",
+      "name": "X",
       "installed": true,
       "visible": true,
       "dock": false,
       "folder": "",
       "icon": ""
     },
-    "phone",
-    "messages",
-    "contacts",
-    "photos",
+    {
+      "id": "notes",
+      "name": "备忘录",
+      "installed": true,
+      "visible": true,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "calendar",
+      "name": "日历",
+      "installed": true,
+      "visible": true,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "spotify",
+      "name": "Spotify",
+      "installed": true,
+      "visible": true,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "photos",
+      "name": "相册",
+      "installed": true,
+      "visible": true,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "contacts",
+      "name": "通讯录",
+      "installed": true,
+      "visible": true,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "phone",
+      "name": "电话",
+      "installed": true,
+      "visible": true,
+      "dock": true,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "messages",
+      "name": "信息",
+      "installed": true,
+      "visible": true,
+      "dock": true,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "settings",
+      "name": "设置",
+      "installed": true,
+      "visible": true,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
+    {
+      "id": "appstore",
+      "name": "App Store",
+      "installed": true,
+      "visible": true,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    },
     {
       "id": "camera",
       "name": "相机",
@@ -45,655 +129,6756 @@
       "folder": "",
       "icon": ""
     },
-    "safari",
-    "notes",
-    "calendar",
-    "mail",
-    "clock",
-    "reminders",
-    "files",
-    "music",
-    "maps",
-    "weather",
-    "wallet",
-    "health",
-    "find",
-    "calculator",
-    "settings",
-    "qq",
-    "weibo",
-    "redbook",
-    "bilibili",
-    "alipay",
-    "taobao",
-    "netease",
-    "delivery",
-    "forum",
-    "whatsapp",
-    "instagram",
-    "tiktok",
-    "twitter",
-    "telegram",
-    "discord",
-    "youtube",
-    "line",
-    "snapchat",
-    "facebook",
-    "messenger",
-    "reddit",
-    "spotify",
-    "netflix",
-    "pinterest",
-    "threads",
-    "kakao"
+    {
+      "id": "clock",
+      "name": "时钟",
+      "installed": true,
+      "visible": true,
+      "dock": false,
+      "folder": "",
+      "icon": ""
+    }
   ],
   "contacts": [
     {
-      "id": "test-contact",
-      "name": "测试联系人",
-      "phone": "",
-      "bio": "这是一条测试内容。"
+      "id": "baekhyun",
+      "name": "백현 · 伯贤",
+      "bio": "艺人；本故事中的角色演绎为虚构"
+    },
+    {
+      "id": "han",
+      "name": "韩组长",
+      "bio": "随行团队负责人"
+    },
+    {
+      "id": "minseo",
+      "name": "민서 · 敏书",
+      "bio": "同事"
     }
   ],
   "chats": [
     {
-      "id": "test-chat-messages",
-      "app": "messages",
-      "title": "测试会话",
-      "participants": [
-        "owner",
-        "test-contact"
-      ],
-      "messages": [
-        {
-          "id": "test-message-messages",
-          "body": "这是一条测试消息。",
-          "senderId": "test-contact"
-        }
-      ]
-    },
-    {
-      "id": "test-chat-wechat",
-      "app": "wechat",
-      "title": "测试会话",
-      "participants": [
-        "owner",
-        "test-contact"
-      ],
-      "messages": [
-        {
-          "id": "test-message-wechat",
-          "body": "这是一条测试消息。",
-          "senderId": "test-contact"
-        }
-      ]
-    },
-    {
-      "id": "test-chat-qq",
-      "app": "qq",
-      "title": "测试会话",
-      "participants": [
-        "owner",
-        "test-contact"
-      ],
-      "messages": [
-        {
-          "id": "test-message-qq",
-          "body": "这是一条测试消息。",
-          "senderId": "test-contact"
-        }
-      ]
-    },
-    {
-      "id": "test-chat-whatsapp",
-      "app": "whatsapp",
-      "title": "测试会话",
-      "participants": [
-        "owner",
-        "test-contact"
-      ],
-      "messages": [
-        {
-          "id": "test-message-whatsapp",
-          "body": "这是一条测试消息。",
-          "senderId": "test-contact"
-        }
-      ]
-    },
-    {
-      "id": "test-chat-telegram",
-      "app": "telegram",
-      "title": "测试会话",
-      "participants": [
-        "owner",
-        "test-contact"
-      ],
-      "messages": [
-        {
-          "id": "test-message-telegram",
-          "body": "这是一条测试消息。",
-          "senderId": "test-contact"
-        }
-      ]
-    },
-    {
-      "id": "test-chat-discord",
-      "app": "discord",
-      "title": "测试会话",
-      "participants": [
-        "owner",
-        "test-contact"
-      ],
-      "messages": [
-        {
-          "id": "test-message-discord",
-          "body": "这是一条测试消息。",
-          "senderId": "test-contact"
-        }
-      ]
-    },
-    {
-      "id": "test-chat-line",
-      "app": "line",
-      "title": "测试会话",
-      "participants": [
-        "owner",
-        "test-contact"
-      ],
-      "messages": [
-        {
-          "id": "test-message-line",
-          "body": "这是一条测试消息。",
-          "senderId": "test-contact"
-        }
-      ]
-    },
-    {
-      "id": "test-chat-messenger",
-      "app": "messenger",
-      "title": "测试会话",
-      "participants": [
-        "owner",
-        "test-contact"
-      ],
-      "messages": [
-        {
-          "id": "test-message-messenger",
-          "body": "这是一条测试消息。",
-          "senderId": "test-contact"
-        }
-      ]
-    },
-    {
-      "id": "test-chat-kakao",
+      "id": "stage-chat-0",
       "app": "kakao",
-      "title": "测试会话",
+      "title": "随行工作群",
       "participants": [
         "owner",
-        "test-contact"
+        "baekhyun",
+        "han",
+        "minseo"
       ],
       "messages": [
         {
-          "id": "test-message-kakao",
-          "body": "这是一条测试消息。",
-          "senderId": "test-contact"
+          "id": "stage-0-msg-0",
+          "body": "到了先来后台休息室，交接表在群文件里。",
+          "senderId": "han",
+          "time": "2026-10-25 07:30",
+          "hidden": false
         },
         {
-          "id": "test-reply-kakao",
-          "body": "这是一条测试回复。",
-          "senderId": "owner"
+          "id": "stage-0-msg-1",
+          "body": "从B口进，我在里面接你。",
+          "senderId": "minseo",
+          "time": "2026-10-25 07:30",
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "id": "stage-chat-2",
+      "app": "kakao",
+      "title": "백현 · 伯贤",
+      "participants": [
+        "owner",
+        "baekhyun",
+        "han",
+        "minseo"
+      ],
+      "messages": [
+        {
+          "id": "stage-2-msg-0",
+          "body": "我是伯贤。韩组长说以后的日常记录找你。",
+          "senderId": "baekhyun",
+          "time": "2026-10-26 09:10",
+          "hidden": true
+        },
+        {
+          "id": "stage-2-msg-1",
+          "body": "刚才那个表，最后一项我漏了。",
+          "senderId": "baekhyun",
+          "time": "2026-10-26 09:10",
+          "hidden": true
+        }
+      ]
+    },
+    {
+      "id": "stage-chat-6",
+      "app": "kakao",
+      "title": "백현 · 伯贤",
+      "participants": [
+        "owner",
+        "baekhyun",
+        "han",
+        "minseo"
+      ],
+      "messages": [
+        {
+          "id": "stage-6-msg-0",
+          "body": "系统：X上的粉丝讨论开放了“演出讨论区”。",
+          "senderId": "baekhyun",
+          "time": "2026-11-09 19:20",
+          "hidden": true
+        },
+        {
+          "id": "stage-6-msg-1",
+          "body": "耳返不要掉：工作人员换班很正常，别截脸认人。",
+          "senderId": "baekhyun",
+          "time": "2026-11-09 19:20",
+          "hidden": true
+        }
+      ]
+    },
+    {
+      "id": "stage-chat-7",
+      "app": "kakao",
+      "title": "백현 · 伯贤",
+      "participants": [
+        "owner",
+        "baekhyun",
+        "han",
+        "minseo"
+      ],
+      "messages": [
+        {
+          "id": "stage-7-msg-0",
+          "body": "你发的提醒是旧时间，刚才是不是没看到群？",
+          "senderId": "baekhyun",
+          "time": "2026-11-15 10:05",
+          "hidden": true
+        }
+      ]
+    },
+    {
+      "id": "stage-chat-8",
+      "app": "kakao",
+      "title": "백현 · 伯贤",
+      "participants": [
+        "owner",
+        "baekhyun",
+        "han",
+        "minseo"
+      ],
+      "messages": [
+        {
+          "id": "stage-8-msg-0",
+          "body": "今天那把伞还在我这里。上面写的是你的名字吗？",
+          "senderId": "baekhyun",
+          "time": "2026-11-16 21:08",
+          "hidden": true
+        },
+        {
+          "id": "stage-8-msg-1",
+          "body": "不是我的，是物资箱里的。",
+          "senderId": "owner",
+          "time": "2026-11-16 21:08",
+          "hidden": true
+        },
+        {
+          "id": "stage-8-msg-2",
+          "body": "那我差点认真保管错了。",
+          "senderId": "baekhyun",
+          "time": "2026-11-16 21:08",
+          "hidden": true
+        }
+      ]
+    },
+    {
+      "id": "stage-chat-9",
+      "app": "kakao",
+      "title": "백현 · 伯贤",
+      "participants": [
+        "owner",
+        "baekhyun",
+        "han",
+        "minseo"
+      ],
+      "messages": [
+        {
+          "id": "stage-9-msg-0",
+          "body": "今天那项记录能不能晚一点？我想先安静坐十分钟。",
+          "senderId": "baekhyun",
+          "time": "2026-11-17 20:40",
+          "hidden": true
+        }
+      ]
+    },
+    {
+      "id": "stage-chat-10",
+      "app": "kakao",
+      "title": "백현 · 伯贤",
+      "participants": [
+        "owner",
+        "baekhyun",
+        "han",
+        "minseo"
+      ],
+      "messages": [
+        {
+          "id": "stage-10-msg-0",
+          "body": "可以了。",
+          "senderId": "baekhyun",
+          "time": "2026-11-22 14:30",
+          "hidden": true
+        },
+        {
+          "id": "stage-10-msg-1",
+          "body": "刚才谢谢你没一直站在旁边等。",
+          "senderId": "baekhyun",
+          "time": "2026-11-22 14:30",
+          "hidden": true
+        }
+      ]
+    },
+    {
+      "id": "stage-chat-12",
+      "app": "kakao",
+      "title": "백현 · 伯贤",
+      "participants": [
+        "owner",
+        "baekhyun",
+        "han",
+        "minseo"
+      ],
+      "messages": [
+        {
+          "id": "stage-12-msg-0",
+          "body": "[一张饮料放在桌角的照片]",
+          "senderId": "baekhyun",
+          "time": "2026-11-23 18:20",
+          "hidden": true
+        },
+        {
+          "id": "stage-12-msg-1",
+          "body": "贩卖机债务已偿还。",
+          "senderId": "baekhyun",
+          "time": "2026-11-23 18:20",
+          "hidden": true
+        }
+      ]
+    },
+    {
+      "id": "stage-chat-14",
+      "app": "kakao",
+      "title": "백현 · 伯贤",
+      "participants": [
+        "owner",
+        "baekhyun",
+        "han",
+        "minseo"
+      ],
+      "messages": [
+        {
+          "id": "stage-14-msg-0",
+          "body": "[Spotify歌曲卡片]",
+          "senderId": "baekhyun",
+          "time": "2026-11-29 21:00",
+          "hidden": true
+        },
+        {
+          "id": "stage-14-msg-1",
+          "body": "那天车里你说听过的是这首吧？",
+          "senderId": "baekhyun",
+          "time": "2026-11-29 21:00",
+          "hidden": true
+        }
+      ]
+    },
+    {
+      "id": "stage-chat-15",
+      "app": "kakao",
+      "title": "백현 · 伯贤",
+      "participants": [
+        "owner",
+        "baekhyun",
+        "han",
+        "minseo"
+      ],
+      "messages": [
+        {
+          "id": "stage-15-msg-0",
+          "body": "明天你不随车？",
+          "senderId": "baekhyun",
+          "time": "2026-12-01 18:30",
+          "hidden": true
+        },
+        {
+          "id": "stage-15-msg-1",
+          "body": "轮休，敏书那边有交接。",
+          "senderId": "owner",
+          "time": "2026-12-01 18:30",
+          "hidden": true
+        },
+        {
+          "id": "stage-15-msg-2",
+          "body": "看到了。我刚才还按原来的联系人找你。",
+          "senderId": "baekhyun",
+          "time": "2026-12-01 18:30",
+          "hidden": true
+        }
+      ]
+    },
+    {
+      "id": "stage-chat-16",
+      "app": "kakao",
+      "title": "백현 · 伯贤",
+      "participants": [
+        "owner",
+        "baekhyun",
+        "han",
+        "minseo"
+      ],
+      "messages": [
+        {
+          "id": "stage-16-msg-0",
+          "body": "系统：伯贤撤回了一条消息。",
+          "senderId": "baekhyun",
+          "time": "2026-12-06 23:10",
+          "hidden": true
+        },
+        {
+          "id": "stage-16-msg-1",
+          "body": "没事。本来想问你一家店，后来发现你在休息。",
+          "senderId": "baekhyun",
+          "time": "2026-12-06 23:10",
+          "hidden": true
+        }
+      ]
+    },
+    {
+      "id": "stage-chat-18",
+      "app": "kakao",
+      "title": "백현 · 伯贤",
+      "participants": [
+        "owner",
+        "baekhyun",
+        "han",
+        "minseo"
+      ],
+      "messages": [
+        {
+          "id": "stage-18-msg-0",
+          "body": "Instagram：伯贤更新了公开Story。",
+          "senderId": "baekhyun",
+          "time": "2026-12-14 16:40",
+          "hidden": true
+        },
+        {
+          "id": "stage-18-msg-1",
+          "body": "[天空与草地的短视频]",
+          "senderId": "baekhyun",
+          "time": "2026-12-14 16:40",
+          "hidden": true
+        }
+      ]
+    },
+    {
+      "id": "stage-chat-19",
+      "app": "kakao",
+      "title": "백현 · 伯贤",
+      "participants": [
+        "owner",
+        "baekhyun",
+        "han",
+        "minseo"
+      ],
+      "messages": [
+        {
+          "id": "stage-19-msg-0",
+          "body": "[路边的猫背影]",
+          "senderId": "baekhyun",
+          "time": "2026-12-20 18:10",
+          "hidden": true
+        },
+        {
+          "id": "stage-19-msg-1",
+          "body": "上次你说的，是这种猫吗？",
+          "senderId": "baekhyun",
+          "time": "2026-12-20 18:10",
+          "hidden": true
+        }
+      ]
+    },
+    {
+      "id": "stage-chat-21",
+      "app": "kakao",
+      "title": "백현 · 伯贤",
+      "participants": [
+        "owner",
+        "baekhyun",
+        "han",
+        "minseo"
+      ],
+      "messages": [
+        {
+          "id": "stage-21-msg-0",
+          "body": "电话记录：与伯贤通话 03:42",
+          "senderId": "baekhyun",
+          "time": "2026-12-27 23:10",
+          "hidden": true
+        },
+        {
+          "id": "stage-21-msg-1",
+          "body": "工作事项已经说完，两个人却都没有挂断。",
+          "senderId": "baekhyun",
+          "time": "2026-12-27 23:10",
+          "hidden": true
+        },
+        {
+          "id": "stage-21-msg-2",
+          "body": "事情说完了。",
+          "senderId": "baekhyun",
+          "time": "2026-12-27 23:10",
+          "hidden": true
+        }
+      ]
+    },
+    {
+      "id": "stage-chat-22",
+      "app": "kakao",
+      "title": "백현 · 伯贤",
+      "participants": [
+        "owner",
+        "baekhyun",
+        "han",
+        "minseo"
+      ],
+      "messages": [
+        {
+          "id": "stage-22-msg-0",
+          "body": "上次没说完的是，有家店我想去。",
+          "senderId": "baekhyun",
+          "time": "2026-12-28 20:30",
+          "hidden": true
+        },
+        {
+          "id": "stage-22-msg-1",
+          "body": "不是让你陪我处理工作。你不方便也没关系。",
+          "senderId": "baekhyun",
+          "time": "2026-12-28 20:30",
+          "hidden": true
+        }
+      ]
+    },
+    {
+      "id": "stage-chat-26",
+      "app": "kakao",
+      "title": "백현 · 伯贤",
+      "participants": [
+        "owner",
+        "baekhyun",
+        "han",
+        "minseo"
+      ],
+      "messages": [
+        {
+          "id": "stage-26-msg-0",
+          "body": "到了告诉我。",
+          "senderId": "baekhyun",
+          "time": "2027-01-10 21:30",
+          "hidden": true
+        },
+        {
+          "id": "stage-26-msg-1",
+          "body": "到了。",
+          "senderId": "owner",
+          "time": "2027-01-10 21:30",
+          "hidden": true
+        },
+        {
+          "id": "stage-26-msg-2",
+          "body": "好。今天不是工作，所以这句也不是例行确认。",
+          "senderId": "baekhyun",
+          "time": "2027-01-10 21:30",
+          "hidden": true
+        }
+      ]
+    },
+    {
+      "id": "stage-chat-27",
+      "app": "kakao",
+      "title": "백현 · 伯贤",
+      "participants": [
+        "owner",
+        "baekhyun",
+        "han",
+        "minseo"
+      ],
+      "messages": [
+        {
+          "id": "stage-27-msg-0",
+          "body": "完整照片是六人工作合照。先保存原链接，不要私下回应。",
+          "senderId": "han",
+          "time": "2027-01-17 11:20",
+          "hidden": true
+        },
+        {
+          "id": "stage-27-msg-1",
+          "body": "有没有收到针对自己的私信？有的话先留着，别一个人回。",
+          "senderId": "baekhyun",
+          "time": "2027-01-17 11:20",
+          "hidden": true
+        }
+      ]
+    },
+    {
+      "id": "stage-chat-28",
+      "app": "kakao",
+      "title": "백현 · 伯贤",
+      "participants": [
+        "owner",
+        "baekhyun",
+        "han",
+        "minseo"
+      ],
+      "messages": [
+        {
+          "id": "stage-28-msg-0",
+          "body": "今天经过那台贩卖机，它又坏了。",
+          "senderId": "baekhyun",
+          "time": "2027-01-24 21:00",
+          "hidden": true
+        },
+        {
+          "id": "stage-28-msg-1",
+          "body": "这次你投钱了吗？",
+          "senderId": "owner",
+          "time": "2027-01-24 21:00",
+          "hidden": true
+        },
+        {
+          "id": "stage-28-msg-2",
+          "body": "没有。我吸取教训了。",
+          "senderId": "baekhyun",
+          "time": "2027-01-24 21:00",
+          "hidden": true
+        },
+        {
+          "id": "stage-28-msg-3",
+          "body": "只是突然想到你。",
+          "senderId": "baekhyun",
+          "time": "2027-01-24 21:00",
+          "hidden": true
+        }
+      ]
+    },
+    {
+      "id": "stage-chat-29",
+      "app": "kakao",
+      "title": "백현 · 伯贤",
+      "participants": [
+        "owner",
+        "baekhyun",
+        "han",
+        "minseo"
+      ],
+      "messages": [
+        {
+          "id": "stage-29-msg-0",
+          "body": "完整照片与时间线已经核对，未发现工作资料外泄。",
+          "senderId": "han",
+          "time": "2027-01-31 15:30",
+          "hidden": true
+        },
+        {
+          "id": "stage-29-msg-1",
+          "body": "X讨论：原帖已补充六人原图，并撤回单独同行猜测。",
+          "senderId": "baekhyun",
+          "time": "2027-01-31 15:30",
+          "hidden": true
         }
       ]
     }
   ],
   "content": {
-    "phone": [
-      {
-        "id": "test-item-phone",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "contacts": [
-      {
-        "id": "test-item-contacts",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "photos": [
-      {
-        "id": "test-item-photos",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "camera": [
-      {
-        "id": "test-item-camera",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "safari": [
-      {
-        "id": "test-item-safari",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
     "notes": [
       {
-        "id": "test-item-notes",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
+        "id": "guide",
+        "title": "怎么玩这部手机",
+        "body": "手机属于你。先读KakaoTalk工作群消息，点一下最新一条消息，出现选项后选择回应。通知会提示接下来去哪个应用。面对面场景在备忘录的「现场」中，选择后的完整回应保存在「回应记录」。Instagram和X可自由浏览，评论仅存在本机。设置中可调整壁纸和密码。剧情不会调用付费AI。所有私人对白、社交内容和行程均为虚构。",
+        "folder": "使用说明",
+        "time": "2026-10-25 07:00",
+        "sender": "作品说明",
+        "kind": "note"
+      },
+      {
+        "id": "scene-1",
+        "title": "先吃饭",
+        "body": "场馆后台\n\n伯贤看了一眼桌上的表，手里的笔转了半圈。\n\n“这个要全部填完才能吃饭吗？”",
+        "time": "2026-10-25 07:40",
+        "hidden": true,
+        "folder": "现场",
+        "kind": "note",
+        "sender": "现场 · 叙事",
+        "meta": {
+          "scene": "true"
+        }
+      },
+      {
+        "id": "scene-3",
+        "title": "收工餐食",
+        "body": "后台休息区\n\n大家正分餐。{{player}}还在确认两份没有被领走的餐盒。\n\n伯贤停了一下：“你的那份也拿了吗？”",
+        "time": "2026-11-01 20:30",
+        "hidden": true,
+        "folder": "现场",
+        "kind": "note",
+        "sender": "现场 · 叙事",
+        "meta": {
+          "scene": "true"
+        }
+      },
+      {
+        "id": "scene-4",
+        "title": "下雨的转场",
+        "body": "场馆侧门\n\n门外突然下起雨。伯贤撑开伞，站在台阶下等了一秒。\n\n“你要继续站在那里确认，还是先一起走？”",
+        "time": "2026-11-08 14:30",
+        "hidden": true,
+        "folder": "现场",
+        "kind": "note",
+        "sender": "现场 · 叙事",
+        "meta": {
+          "scene": "true"
+        }
+      },
+      {
+        "id": "scene-5",
+        "title": "旧采访",
+        "body": "候场间隙\n\n{{player}}提起一段与工作习惯有关的旧采访。\n\n伯贤：“这个好像不在交接里。你在哪里看过？”",
+        "time": "2026-11-08 18:10",
+        "hidden": true,
+        "folder": "现场",
+        "kind": "note",
+        "sender": "现场 · 叙事",
+        "meta": {
+          "scene": "true"
+        }
+      },
+      {
+        "id": "scene-11",
+        "title": "自动贩卖机",
+        "body": "夜间后台\n\n自动贩卖机吞了硬币。伯贤又按了两次按钮。\n\n“它好像不太尊重我。”",
+        "time": "2026-11-22 16:40",
+        "hidden": true,
+        "folder": "现场",
+        "kind": "note",
+        "sender": "现场 · 叙事",
+        "meta": {
+          "scene": "true"
+        }
+      },
+      {
+        "id": "scene-13",
+        "title": "车上的歌",
+        "body": "工作车内\n\n敏书在播放列表里加了一首歌。伯贤从前排回过头。\n\n“这首谁加的？”",
+        "time": "2026-11-24 17:30",
+        "hidden": true,
+        "folder": "现场",
+        "kind": "note",
+        "sender": "现场 · 叙事",
+        "meta": {
+          "scene": "true"
+        }
+      },
+      {
+        "id": "scene-17",
+        "title": "名字与利息",
+        "body": "后台桌边\n\n伯贤把一瓶饮料放到{{player}}桌上，第一次直接叫了{{player}}。\n\n“上次那瓶的利息。”",
+        "time": "2026-12-13 14:00",
+        "hidden": true,
+        "folder": "现场",
+        "kind": "note",
+        "sender": "现场 · 叙事",
+        "meta": {
+          "scene": "true"
+        }
+      },
+      {
+        "id": "scene-20",
+        "title": "便利店夜宵",
+        "body": "收工后的便利店\n\n敏书和司机先去结账。热柜前只剩{{player}}和伯贤。\n\n“鱼饼汤和拉面，你会选哪个？”",
+        "time": "2026-12-20 22:00",
+        "hidden": true,
+        "folder": "现场",
+        "kind": "note",
+        "sender": "现场 · 叙事",
+        "meta": {
+          "scene": "true"
+        }
+      },
+      {
+        "id": "scene-23",
+        "title": "过去的关注",
+        "body": "安静的会议室\n\n{{player}}说明自己过去关注伯贤很多年，但工作中只使用能说明来源的信息。\n\n伯贤：“你现在想认识的是我，还是以前想象里的人？”",
+        "time": "2027-01-03 17:00",
+        "hidden": true,
+        "folder": "现场",
+        "kind": "note",
+        "sender": "现场 · 叙事",
+        "meta": {
+          "scene": "true"
+        }
+      },
+      {
+        "id": "scene-24",
+        "title": "第一次工作外见面",
+        "body": "街角小店\n\n伯贤先到了。桌上没有工作表，也没有别人等着交接。\n\n“今天是不是不用全部填完才能吃饭？”",
+        "time": "2027-01-10 18:30",
+        "hidden": true,
+        "folder": "现场",
+        "kind": "note",
+        "sender": "现场 · 叙事",
+        "meta": {
+          "scene": "true"
+        }
+      },
+      {
+        "id": "scene-25",
+        "title": "手冷吗",
+        "body": "冬夜街口\n\n风从路口吹过来。他走慢了一点，没有直接碰{{player}}。\n\n“手冷吗？”",
+        "time": "2027-01-10 20:00",
+        "hidden": true,
+        "folder": "现场",
+        "kind": "note",
+        "sender": "现场 · 叙事",
+        "meta": {
+          "scene": "true"
+        }
+      },
+      {
+        "id": "scene-30",
+        "title": "工作时间之外",
+        "body": "没有工作安排的下午\n\n事实已经处理完。伯贤没有拿任何工作当理由。\n\n“我想继续见你。但不是让你一边负责我的工作，一边猜我把你放在哪里。”",
+        "time": "2027-02-07 15:00",
+        "hidden": true,
+        "folder": "现场",
+        "kind": "note",
+        "sender": "现场 · 叙事",
+        "meta": {
+          "scene": "true"
+        }
+      },
+      {
+        "id": "reply-0-0",
+        "title": "第一次交接 · 回应",
+        "body": "{{player}}：收到，到了联系你。\n\n好，后台见。",
+        "time": "2026-10-25 07:30",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-0-1",
+        "title": "第一次交接 · 回应",
+        "body": "{{player}}：我先确认路线和职责。\n\n慢慢来，不清楚的直接问。",
+        "time": "2026-10-25 07:30",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-1-0",
+        "title": "先吃饭 · 回应",
+        "body": "{{player}}：当然不用，我们可以先吃饭。有些东西需要当面确认。\n\n他把笔放回桌上：“那我先吃。看来今天不用拿问卷换早餐。”",
+        "time": "2026-10-25 07:40",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-1-1",
+        "title": "先吃饭 · 回应",
+        "body": "{{player}}：写过的不用重复，你先吃。\n\n“这样最好。我不太想一早把同样的话再说一遍。”",
+        "time": "2026-10-25 07:40",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-2-0",
+        "title": "第一次直接联系 · 回应",
+        "body": "{{player}}：不急，今天需要确认的已经完成了。\n\n知道了。谢谢。",
+        "time": "2026-10-26 09:10",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-2-1",
+        "title": "第一次直接联系 · 回应",
+        "body": "{{player}}：我整理成简版，以后不用每次重填。\n\n能少填一遍的话，我会认真看。",
+        "time": "2026-10-26 09:10",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-3-0",
+        "title": "收工餐食 · 回应",
+        "body": "{{player}}：拿了，送完这两份就吃。\n\n“好。别送完又被叫去做别的。”",
+        "time": "2026-11-01 20:30",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-3-1",
+        "title": "收工餐食 · 回应",
+        "body": "{{player}}：还没，记录快写完了。\n\n“那份先放着。吃完再写，我这边没有急事。”",
+        "time": "2026-11-01 20:30",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-4-0",
+        "title": "下雨的转场 · 回应",
+        "body": "{{player}}：一起走，车牌路上确认。\n\n他把伞往{{player}}这边偏了偏：“那你看路。我不想第二周就换健康管理师。”",
+        "time": "2026-11-08 14:30",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-4-1",
+        "title": "下雨的转场 · 回应",
+        "body": "{{player}}：你先走，我等下一把。\n\n“好。别站风口。”几分钟后，敏书带着备用伞折回来。",
+        "time": "2026-11-08 14:30",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-4-2",
+        "title": "下雨的转场 · 回应",
+        "body": "{{player}}：担心员工，还是担心没人管你？\n\n“都有。”他笑了，“第二个更现实一点。”",
+        "time": "2026-11-08 14:30",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-5-0",
+        "title": "旧采访 · 回应",
+        "body": "{{player}}：入职前查过公开资料，现在还是以你本人说的为准。\n\n他点点头：“做过功课。旧采访有些是当时的情况，拿不准就问我。”",
+        "time": "2026-11-08 18:10",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-5-1",
+        "title": "旧采访 · 回应",
+        "body": "{{player}}：以前关注过你，入职前又整理了一次。\n\n“这样啊。”他停了停，“工作里要确认的，还是直接问我。”",
+        "time": "2026-11-08 18:10",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-6-0",
+        "title": "论坛里的新面孔 · 回应",
+        "body": "{{player}}：只看，不回复。\n\n帖子继续沉下去，没有人围着一个陌生工作人员讨论。",
+        "time": "2026-11-09 19:20",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-6-1",
+        "title": "论坛里的新面孔 · 回应",
+        "body": "{{player}}：把清晰截图链接发给韩组长。\n\n韩组长：收到。先留原链接，不用自己解释。",
+        "time": "2026-11-09 19:20",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-7-0",
+        "title": "时间更正 · 回应",
+        "body": "{{player}}：刚收到，我核对后重发。谢谢提醒。\n\n嗯。别两边都赶，按新时间就行。",
+        "time": "2026-11-15 10:05",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-7-1",
+        "title": "时间更正 · 回应",
+        "body": "{{player}}：我先找敏书确认。\n\n好，确认完告诉大家。",
+        "time": "2026-11-15 10:05",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-8-0",
+        "title": "保管错的雨伞 · 回应",
+        "body": "{{player}}：也可以认真保管，明天还回去。\n\n收到。物资箱的伞享受了一晚单独保管。",
+        "time": "2026-11-16 21:08",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-8-1",
+        "title": "保管错的雨伞 · 回应",
+        "body": "{{player}}：放前台就行。\n\n好。明天见。",
+        "time": "2026-11-16 21:08",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-9-0",
+        "title": "十分钟 · 回应",
+        "body": "{{player}}：可以。没有紧急情况的话，十分钟后再来。\n\n没有新的不舒服。十分钟后见。",
+        "time": "2026-11-17 20:40",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-9-1",
+        "title": "十分钟 · 回应",
+        "body": "{{player}}：我先和医生确认能不能延后。\n\n好。你确认完告诉我。",
+        "time": "2026-11-17 20:40",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-10-0",
+        "title": "知道什么时候离开 · 回应",
+        "body": "{{player}}：我就在外面，有情况叫我。\n\n嗯。你不站在那里，我反而比较快休息好。",
+        "time": "2026-11-22 14:30",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-10-1",
+        "title": "知道什么时候离开 · 回应",
+        "body": "{{player}}：这是我的工作，不用谢。\n\n工作也可以说谢谢。",
+        "time": "2026-11-22 14:30",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-11-0",
+        "title": "自动贩卖机 · 回应",
+        "body": "{{player}}：我去找场馆人员，别再投了。\n\n“你现在很像在阻止我做危险动作。”",
+        "time": "2026-11-22 16:40",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-11-1",
+        "title": "自动贩卖机 · 回应",
+        "body": "{{player}}：先拿我的，明天还我一瓶。\n\n他看了眼口味：“这个我会记住。欠别人的比较麻烦。”",
+        "time": "2026-11-22 16:40",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-11-2",
+        "title": "自动贩卖机 · 回应",
+        "body": "{{player}}：再投一次，也许它在确认诚意。\n\n“你站在机器那边？”他还是笑了。",
+        "time": "2026-11-22 16:40",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-12-0",
+        "title": "贩卖机债务 · 回应",
+        "body": "{{player}}：利息呢？\n\n你先说利率。我判断要不要逃跑。",
+        "time": "2026-11-23 18:20",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-12-1",
+        "title": "贩卖机债务 · 回应",
+        "body": "{{player}}：已确认收到。\n\n这么正式？那我也申请一张确认单。",
+        "time": "2026-11-23 18:20",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-13-0",
+        "title": "车上的歌 · 回应",
+        "body": "{{player}}：这首我也听过。\n\n“那今天选歌的人至少赢两票。”",
+        "time": "2026-11-24 17:30",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-13-1",
+        "title": "车上的歌 · 回应",
+        "body": "{{player}}：我想知道歌名。\n\n敏书发进群里。伯贤：“不是新工作通知。”",
+        "time": "2026-11-24 17:30",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-14-0",
+        "title": "记住的那一首 · 回应",
+        "body": "{{player}}：我后来又听了一遍。\n\n那我没记错。你更喜欢哪一段？",
+        "time": "2026-11-29 21:00",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-14-1",
+        "title": "记住的那一首 · 回应",
+        "body": "{{player}}：你居然还记得。\n\n你当时跟着节奏点头，很难完全没看到。\n\n{{player}}：所以你那时候在看我？\n\n……\n\n他没有回答，只把歌曲卡片又发了一遍。\n\n伯贤：你还没说，更喜欢哪一段。",
+        "time": "2026-11-29 21:00",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-15-0",
+        "title": "第一次发现她不在 · 回应",
+        "body": "{{player}}：终于不用设早起闹钟了。\n\n不要故意告诉我你能睡懒觉。我明天还是要早起。",
+        "time": "2026-12-01 18:30",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-15-1",
+        "title": "第一次发现她不在 · 回应",
+        "body": "{{player}}：交接已经写清楚了。\n\n嗯。那你好好休息。",
+        "time": "2026-12-01 18:30",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-16-0",
+        "title": "撤回的半条消息 · 回应",
+        "body": "{{player}}：休息也可以回答店的问题。\n\n不是工作。我问了的话，好像会变成打扰。",
+        "time": "2026-12-06 23:10",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-16-1",
+        "title": "撤回的半条消息 · 回应",
+        "body": "{{player}}：那下次见面再问。\n\n好，我记着。",
+        "time": "2026-12-06 23:10",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-16-2",
+        "title": "撤回的半条消息 · 回应",
+        "body": "{{player}}：今天想彻底离线。\n\n知道了。明天见。",
+        "time": "2026-12-06 23:10",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-17-0",
+        "title": "名字与利息 · 回应",
+        "body": "{{player}}：今天怎么突然叫名字？\n\n他停了一下：“不可以吗？”",
+        "time": "2026-12-13 14:00",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-17-1",
+        "title": "名字与利息 · 回应",
+        "body": "{{player}}：你已经叫了才问？\n\n“所以是在补手续。”",
+        "time": "2026-12-13 14:00",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-17-2",
+        "title": "名字与利息 · 回应",
+        "body": "{{player}}：工作时还是叫职位比较好。\n\n“好，我会注意。”",
+        "time": "2026-12-13 14:00",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-18-0",
+        "title": "Instagram Story · 回应",
+        "body": "{{player}}：看起来天气很好。\n\n照片比实际拍得好。风很大。",
+        "time": "2026-12-14 16:40",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-18-1",
+        "title": "Instagram Story · 回应",
+        "body": "{{player}}：你今天按时吃饭了吗？\n\n现在不是工作时间，不接受检查ㅋㅋ\n\n{{player}}：那我撤回。\n\n也不用撤得这么快。",
+        "time": "2026-12-14 16:40",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-19-0",
+        "title": "只发给{{player}}的照片 · 回应",
+        "body": "{{player}}：不是，不过尾巴也很像问号。\n\n那我认错了。它刚才看我的表情也差不多。",
+        "time": "2026-12-20 18:10",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-19-1",
+        "title": "只发给{{player}}的照片 · 回应",
+        "body": "{{player}}：你竟然还记得。\n\n你那天讲得很认真。忘了的话，好像显得我没听。",
+        "time": "2026-12-20 18:10",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-20-0",
+        "title": "便利店夜宵 · 回应",
+        "body": "{{player}}：鱼饼汤。现在太晚了。\n\n“这回答很像工作建议。”他看了{{player}}一眼，“那你不工作的时候呢？”",
+        "time": "2026-12-20 22:00",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-20-1",
+        "title": "便利店夜宵 · 回应",
+        "body": "{{player}}：两个都要。\n\n“终于听到不像交接表的答案了。”",
+        "time": "2026-12-20 22:00",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-20-2",
+        "title": "便利店夜宵 · 回应",
+        "body": "{{player}}：你先选，我不负责。\n\n“今天很严格。”他笑着自己拿了鱼饼汤。",
+        "time": "2026-12-20 22:00",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-21-0",
+        "title": "都没有先挂断 · 回应",
+        "body": "{{player}}：你也没挂。\n\n那一起数三下？\n\n数到二，他先笑了：算了。明天见。",
+        "time": "2026-12-27 23:10",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-21-1",
+        "title": "都没有先挂断 · 回应",
+        "body": "{{player}}：还有别的想说吗？\n\n有一点。\n\n……\n\n不过现在说，好像不太合适。下次吧。",
+        "time": "2026-12-27 23:10",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-22-0",
+        "title": "工作以外的问题 · 回应",
+        "body": "{{player}}：想去，但先确认不会影响工作。\n\n好。别让它变成你休息日还要照顾我。",
+        "time": "2026-12-28 20:30",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-22-1",
+        "title": "工作以外的问题 · 回应",
+        "body": "{{player}}：我现在想保持工作关系。\n\n知道了。工作照旧，你不用躲着我。",
+        "time": "2026-12-28 20:30",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-22-2",
+        "title": "工作以外的问题 · 回应",
+        "body": "{{player}}：答应前，我有件事想说清楚。\n\n好。我们当面说。",
+        "time": "2026-12-28 20:30",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-23-0",
+        "title": "过去的关注 · 回应",
+        "body": "{{player}}：我还在认识你，不想说得太满。\n\n“好。那就一件一件分开。”",
+        "time": "2027-01-03 17:00",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-23-1",
+        "title": "过去的关注 · 回应",
+        "body": "{{player}}：你比想象中更会记仇，尤其是贩卖机。\n\n他笑出来：“这个可以继续了解。”",
+        "time": "2027-01-03 17:00",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-23-2",
+        "title": "过去的关注 · 回应",
+        "body": "{{player}}：我还没整理好。\n\n“那先不用给答案。”",
+        "time": "2027-01-03 17:00",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-24-0",
+        "title": "第一次工作外见面 · 回应",
+        "body": "{{player}}：要看你有没有漏最后一项。\n\n“第一次见面那件事你还记得？”{{player}}看着他：“你不也记得。”",
+        "time": "2027-01-10 18:30",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-24-1",
+        "title": "第一次工作外见面 · 回应",
+        "body": "{{player}}：今天不谈表。\n\n“好。”他把菜单推过来，“那先说你想吃什么。”",
+        "time": "2027-01-10 18:30",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-25-0",
+        "title": "手冷吗 · 回应",
+        "body": "{{player}}：有一点。\n\n他把没拆封的暖宝宝递过来：“这个比我可靠。”",
+        "time": "2027-01-10 20:00",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-25-1",
+        "title": "手冷吗 · 回应",
+        "body": "{{player}}：你问这个，是有解决办法吗？\n\n他看了眼{{player}}伸出的手：“有。但我想先确认你是真的愿意。”\n\n{{player}}再次点头后，他才握住。到路口时自然松开。",
+        "time": "2027-01-10 20:00",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-25-2",
+        "title": "手冷吗 · 回应",
+        "body": "{{player}}：还好。\n\n“那走慢一点，前面路滑。”",
+        "time": "2027-01-10 20:00",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-26-0",
+        "title": "不是例行确认 · 回应",
+        "body": "{{player}}：那是什么？\n\n是我想知道。",
+        "time": "2027-01-10 21:30",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-26-1",
+        "title": "不是例行确认 · 回应",
+        "body": "{{player}}：你也到了吗？\n\n刚到。现在可以一起结束今天了。晚安。",
+        "time": "2027-01-10 21:30",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-27-0",
+        "title": "被裁剪的照片 · 回应",
+        "body": "{{player}}：按流程提交链接和截图。\n\n看到了。今晚先别再看论坛。",
+        "time": "2027-01-17 11:20",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-27-1",
+        "title": "被裁剪的照片 · 回应",
+        "body": "{{player}}：暂时不看，委托组长通知进展。\n\n好。需要知道的，我让他们直接告诉你。",
+        "time": "2027-01-17 11:20",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-28-0",
+        "title": "只是突然想到你 · 回应",
+        "body": "{{player}}：我也想你。\n\n这句我先收着。等事情处理完，我们当面说。",
+        "time": "2027-01-24 21:00",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-28-1",
+        "title": "只是突然想到你 · 回应",
+        "body": "{{player}}：想到我，还是债务管理员？\n\n先想到管理员。然后发现不是工作时间。",
+        "time": "2027-01-24 21:00",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-28-2",
+        "title": "只是突然想到你 · 回应",
+        "body": "{{player}}：先把事情处理好。\n\n嗯。你说得对。",
+        "time": "2027-01-24 21:00",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-29-0",
+        "title": "事实核对完成 · 回应",
+        "body": "{{player}}：继续现岗位，但重新划分汇报关系。\n\n韩组长：可以，下周写进新交接。",
+        "time": "2027-01-31 15:30",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-29-1",
+        "title": "事实核对完成 · 回应",
+        "body": "{{player}}：申请调整职责。\n\n韩组长：收到。先保护双方边界。",
+        "time": "2027-01-31 15:30",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-30-0",
+        "title": "工作时间之外 · 回应",
+        "body": "{{player}}：我愿意试着了解工作以外的你。\n\n“好。”他伸出手，又停在半空，“这次可以吗？”",
+        "time": "2027-02-07 15:00",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-30-1",
+        "title": "工作时间之外 · 回应",
+        "body": "{{player}}：我喜欢现在的靠近，但还想慢一点。\n\n“那就慢一点。今天不用决定所有事。”",
+        "time": "2027-02-07 15:00",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-30-2",
+        "title": "工作时间之外 · 回应",
+        "body": "{{player}}：我更希望继续做可靠的同事。\n\n他安静了一会儿，点头：“好。把工作做好，也把边界守好。”",
+        "time": "2027-02-07 15:00",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
+      },
+      {
+        "id": "reply-30-3",
+        "title": "工作时间之外 · 回应",
+        "body": "{{player}}：我想先离开这份工作。\n\n“我明白。以后要不要联系，由你决定。”",
+        "time": "2027-02-07 15:00",
+        "hidden": true,
+        "folder": "回应记录",
+        "kind": "note",
+        "sender": "故事记录"
       }
     ],
     "calendar": [
       {
-        "id": "test-item-calendar",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "mail": [
+        "id": "calendar-0",
+        "title": "第一次交接",
+        "body": "手机联系 · 查看KakaoTalk",
+        "time": "2026-10-25 07:30",
+        "hidden": false,
+        "kind": "event"
+      },
       {
-        "id": "test-item-mail",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "clock": [
+        "id": "calendar-1",
+        "title": "先吃饭",
+        "body": "当面交谈 · 查看备忘录中的现场记录",
+        "time": "2026-10-25 07:40",
+        "hidden": true,
+        "kind": "event"
+      },
       {
-        "id": "test-item-clock",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "reminders": [
+        "id": "calendar-2",
+        "title": "第一次直接联系",
+        "body": "手机联系 · 查看KakaoTalk",
+        "time": "2026-10-26 09:10",
+        "hidden": true,
+        "kind": "event"
+      },
       {
-        "id": "test-item-reminders",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "files": [
+        "id": "calendar-3",
+        "title": "收工餐食",
+        "body": "当面交谈 · 查看备忘录中的现场记录",
+        "time": "2026-11-01 20:30",
+        "hidden": true,
+        "kind": "event"
+      },
       {
-        "id": "test-item-files",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "music": [
+        "id": "calendar-4",
+        "title": "下雨的转场",
+        "body": "当面交谈 · 查看备忘录中的现场记录",
+        "time": "2026-11-08 14:30",
+        "hidden": true,
+        "kind": "event"
+      },
       {
-        "id": "test-item-music",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "maps": [
+        "id": "calendar-5",
+        "title": "旧采访",
+        "body": "当面交谈 · 查看备忘录中的现场记录",
+        "time": "2026-11-08 18:10",
+        "hidden": true,
+        "kind": "event"
+      },
       {
-        "id": "test-item-maps",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "weather": [
+        "id": "calendar-6",
+        "title": "论坛里的新面孔",
+        "body": "手机联系 · 查看KakaoTalk",
+        "time": "2026-11-09 19:20",
+        "hidden": true,
+        "kind": "event"
+      },
       {
-        "id": "test-item-weather",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "wallet": [
+        "id": "calendar-7",
+        "title": "时间更正",
+        "body": "手机联系 · 查看KakaoTalk",
+        "time": "2026-11-15 10:05",
+        "hidden": true,
+        "kind": "event"
+      },
       {
-        "id": "test-item-wallet",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "health": [
+        "id": "calendar-8",
+        "title": "保管错的雨伞",
+        "body": "手机联系 · 查看KakaoTalk",
+        "time": "2026-11-16 21:08",
+        "hidden": true,
+        "kind": "event"
+      },
       {
-        "id": "test-item-health",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "find": [
+        "id": "calendar-9",
+        "title": "十分钟",
+        "body": "手机联系 · 查看KakaoTalk",
+        "time": "2026-11-17 20:40",
+        "hidden": true,
+        "kind": "event"
+      },
       {
-        "id": "test-item-find",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "calculator": [
+        "id": "calendar-10",
+        "title": "知道什么时候离开",
+        "body": "手机联系 · 查看KakaoTalk",
+        "time": "2026-11-22 14:30",
+        "hidden": true,
+        "kind": "event"
+      },
       {
-        "id": "test-item-calculator",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "settings": [
+        "id": "calendar-11",
+        "title": "自动贩卖机",
+        "body": "当面交谈 · 查看备忘录中的现场记录",
+        "time": "2026-11-22 16:40",
+        "hidden": true,
+        "kind": "event"
+      },
       {
-        "id": "test-item-settings",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "weibo": [
+        "id": "calendar-12",
+        "title": "贩卖机债务",
+        "body": "手机联系 · 查看KakaoTalk",
+        "time": "2026-11-23 18:20",
+        "hidden": true,
+        "kind": "event"
+      },
       {
-        "id": "test-item-weibo",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "redbook": [
+        "id": "calendar-13",
+        "title": "车上的歌",
+        "body": "当面交谈 · 查看备忘录中的现场记录",
+        "time": "2026-11-24 17:30",
+        "hidden": true,
+        "kind": "event"
+      },
       {
-        "id": "test-item-redbook",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "douyin": [
+        "id": "calendar-14",
+        "title": "记住的那一首",
+        "body": "手机联系 · 查看KakaoTalk",
+        "time": "2026-11-29 21:00",
+        "hidden": true,
+        "kind": "event"
+      },
       {
-        "id": "test-item-douyin",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "bilibili": [
+        "id": "calendar-15",
+        "title": "第一次发现她不在",
+        "body": "手机联系 · 查看KakaoTalk",
+        "time": "2026-12-01 18:30",
+        "hidden": true,
+        "kind": "event"
+      },
       {
-        "id": "test-item-bilibili",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "alipay": [
+        "id": "calendar-16",
+        "title": "撤回的半条消息",
+        "body": "手机联系 · 查看KakaoTalk",
+        "time": "2026-12-06 23:10",
+        "hidden": true,
+        "kind": "event"
+      },
       {
-        "id": "test-item-alipay",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "taobao": [
+        "id": "calendar-17",
+        "title": "名字与利息",
+        "body": "当面交谈 · 查看备忘录中的现场记录",
+        "time": "2026-12-13 14:00",
+        "hidden": true,
+        "kind": "event"
+      },
       {
-        "id": "test-item-taobao",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "netease": [
+        "id": "calendar-18",
+        "title": "Instagram Story",
+        "body": "手机联系 · 查看KakaoTalk",
+        "time": "2026-12-14 16:40",
+        "hidden": true,
+        "kind": "event"
+      },
       {
-        "id": "test-item-netease",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "delivery": [
+        "id": "calendar-19",
+        "title": "只发给{{player}}的照片",
+        "body": "手机联系 · 查看KakaoTalk",
+        "time": "2026-12-20 18:10",
+        "hidden": true,
+        "kind": "event"
+      },
       {
-        "id": "test-item-delivery",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "forum": [
+        "id": "calendar-20",
+        "title": "便利店夜宵",
+        "body": "当面交谈 · 查看备忘录中的现场记录",
+        "time": "2026-12-20 22:00",
+        "hidden": true,
+        "kind": "event"
+      },
       {
-        "id": "test-item-forum",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
+        "id": "calendar-21",
+        "title": "都没有先挂断",
+        "body": "手机联系 · 查看KakaoTalk",
+        "time": "2026-12-27 23:10",
+        "hidden": true,
+        "kind": "event"
+      },
+      {
+        "id": "calendar-22",
+        "title": "工作以外的问题",
+        "body": "手机联系 · 查看KakaoTalk",
+        "time": "2026-12-28 20:30",
+        "hidden": true,
+        "kind": "event"
+      },
+      {
+        "id": "calendar-23",
+        "title": "过去的关注",
+        "body": "当面交谈 · 查看备忘录中的现场记录",
+        "time": "2027-01-03 17:00",
+        "hidden": true,
+        "kind": "event"
+      },
+      {
+        "id": "calendar-24",
+        "title": "第一次工作外见面",
+        "body": "当面交谈 · 查看备忘录中的现场记录",
+        "time": "2027-01-10 18:30",
+        "hidden": true,
+        "kind": "event"
+      },
+      {
+        "id": "calendar-25",
+        "title": "手冷吗",
+        "body": "当面交谈 · 查看备忘录中的现场记录",
+        "time": "2027-01-10 20:00",
+        "hidden": true,
+        "kind": "event"
+      },
+      {
+        "id": "calendar-26",
+        "title": "不是例行确认",
+        "body": "手机联系 · 查看KakaoTalk",
+        "time": "2027-01-10 21:30",
+        "hidden": true,
+        "kind": "event"
+      },
+      {
+        "id": "calendar-27",
+        "title": "被裁剪的照片",
+        "body": "手机联系 · 查看KakaoTalk",
+        "time": "2027-01-17 11:20",
+        "hidden": true,
+        "kind": "event"
+      },
+      {
+        "id": "calendar-28",
+        "title": "只是突然想到你",
+        "body": "手机联系 · 查看KakaoTalk",
+        "time": "2027-01-24 21:00",
+        "hidden": true,
+        "kind": "event"
+      },
+      {
+        "id": "calendar-29",
+        "title": "事实核对完成",
+        "body": "手机联系 · 查看KakaoTalk",
+        "time": "2027-01-31 15:30",
+        "hidden": true,
+        "kind": "event"
+      },
+      {
+        "id": "calendar-30",
+        "title": "工作时间之外",
+        "body": "当面交谈 · 查看备忘录中的现场记录",
+        "time": "2027-02-07 15:00",
+        "hidden": true,
+        "kind": "event"
       }
     ],
     "instagram": [
       {
-        "id": "test-item-instagram",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "tiktok": [
+        "id": "instagram-post-0",
+        "title": "baekhyunee_exo",
+        "sender": "baekhyunee_exo",
+        "body": "연습 끝. 오늘도 고생했어요.",
+        "time": "2026-10-25 10:20",
+        "kind": "post",
+        "folder": "正在关注",
+        "likes": 12,
+        "comments": [
+          "별하나：오늘도 좋은 하루 보내요!\n今天也祝你度过美好的一天。",
+          "moonriver：Thank you for sharing.\n谢谢分享。"
+        ],
+        "meta": {
+          "handle": "baekhyunee_exo",
+          "originalLanguage": "ko",
+          "translationZh": "练习结束。今天也辛苦了。",
+          "fictional": "true"
+        }
+      },
       {
-        "id": "test-item-tiktok",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
+        "id": "instagram-post-1",
+        "title": "coffee.archive",
+        "sender": "coffee.archive",
+        "body": "A quiet corner before the city wakes up.",
+        "time": "2026-10-25 11:20",
+        "kind": "post",
+        "folder": "正在关注",
+        "likes": 19,
+        "comments": [
+          "별하나：오늘도 좋은 하루 보내요!\n今天也祝你度过美好的一天。",
+          "moonriver：Thank you for sharing.\n谢谢分享。"
+        ],
+        "meta": {
+          "handle": "coffee.archive",
+          "originalLanguage": "en",
+          "translationZh": "在城市醒来之前，找一个安静角落。",
+          "fictional": "true"
+        }
+      },
+      {
+        "id": "instagram-post-2",
+        "title": "seoul.walks",
+        "sender": "seoul.walks",
+        "body": "오늘 강바람이 차가워요. 겉옷 챙기세요.",
+        "time": "2026-10-25 12:20",
+        "kind": "post",
+        "folder": "正在关注",
+        "likes": 26,
+        "comments": [
+          "별하나：오늘도 좋은 하루 보내요!\n今天也祝你度过美好的一天。",
+          "moonriver：Thank you for sharing.\n谢谢分享。"
+        ],
+        "meta": {
+          "handle": "seoul.walks",
+          "originalLanguage": "ko",
+          "translationZh": "今天河边风凉，记得带外套。",
+          "fictional": "true"
+        }
+      },
+      {
+        "id": "instagram-post-3",
+        "title": "minseo.daily",
+        "sender": "minseo.daily",
+        "body": "점심은 늦어도 거르지 않기.",
+        "time": "2026-10-25 13:20",
+        "kind": "post",
+        "folder": "正在关注",
+        "likes": 33,
+        "comments": [
+          "별하나：오늘도 좋은 하루 보내요!\n今天也祝你度过美好的一天。",
+          "moonriver：Thank you for sharing.\n谢谢分享。"
+        ],
+        "meta": {
+          "handle": "minseo.daily",
+          "originalLanguage": "ko",
+          "translationZh": "午饭晚一点也不要省掉。",
+          "fictional": "true"
+        }
+      },
+      {
+        "id": "instagram-post-4",
+        "title": "무대뒤의빛",
+        "sender": "무대뒤의빛",
+        "body": "마지막 곡의 여운이 아직 남아 있어요. 여러분은 어땠나요?",
+        "time": "2026-10-25 14:20",
+        "kind": "post",
+        "folder": "发现",
+        "likes": 40,
+        "comments": [
+          "별하나：오늘도 좋은 하루 보내요!\n今天也祝你度过美好的一天。",
+          "moonriver：Thank you for sharing.\n谢谢分享。"
+        ],
+        "meta": {
+          "handle": "무대뒤의빛",
+          "originalLanguage": "ko",
+          "translationZh": "最后一首的余韵还在，大家觉得怎么样？",
+          "fictional": "true"
+        }
+      },
+      {
+        "id": "instagram-post-5",
+        "title": "Sora",
+        "sender": "Sora",
+        "body": "Please respect staff privacy. We can talk about the show without identifying people at work.",
+        "time": "2026-10-25 15:20",
+        "kind": "post",
+        "folder": "发现",
+        "likes": 47,
+        "comments": [
+          "별하나：오늘도 좋은 하루 보내요!\n今天也祝你度过美好的一天。",
+          "moonriver：Thank you for sharing.\n谢谢分享。"
+        ],
+        "meta": {
+          "handle": "Sora",
+          "originalLanguage": "en",
+          "translationZh": "请尊重工作人员隐私，讨论演出就好，不必辨认工作中的人。",
+          "fictional": "true"
+        }
+      },
+      {
+        "id": "ig-private",
+        "title": "민서 · 敏书",
+        "sender": "민서 · 敏书",
+        "body": "내일 집합 시간은 업무 단체방에 올려뒀어요.",
+        "time": "2026-10-25 18:40",
+        "folder": "私信",
+        "meta": {
+          "translationZh": "明天的集合时间已放到工作群里，别忘了看。"
+        }
       }
     ],
     "twitter": [
       {
-        "id": "test-item-twitter",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "youtube": [
+        "id": "twitter-post-0",
+        "title": "baekhyunee_exo",
+        "sender": "baekhyunee_exo",
+        "body": "연습 끝. 오늘도 고생했어요.",
+        "time": "2026-10-25 10:20",
+        "kind": "post",
+        "folder": "正在关注",
+        "likes": 12,
+        "comments": [
+          "별하나：오늘도 좋은 하루 보내요!\n今天也祝你度过美好的一天。",
+          "moonriver：Thank you for sharing.\n谢谢分享。"
+        ],
+        "meta": {
+          "handle": "baekhyunee_exo",
+          "originalLanguage": "ko",
+          "translationZh": "练习结束。今天也辛苦了。",
+          "fictional": "true"
+        }
+      },
       {
-        "id": "test-item-youtube",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "snapchat": [
+        "id": "twitter-post-1",
+        "title": "coffee.archive",
+        "sender": "coffee.archive",
+        "body": "A quiet corner before the city wakes up.",
+        "time": "2026-10-25 11:20",
+        "kind": "post",
+        "folder": "正在关注",
+        "likes": 19,
+        "comments": [
+          "별하나：오늘도 좋은 하루 보내요!\n今天也祝你度过美好的一天。",
+          "moonriver：Thank you for sharing.\n谢谢分享。"
+        ],
+        "meta": {
+          "handle": "coffee.archive",
+          "originalLanguage": "en",
+          "translationZh": "在城市醒来之前，找一个安静角落。",
+          "fictional": "true"
+        }
+      },
       {
-        "id": "test-item-snapchat",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "facebook": [
+        "id": "twitter-post-2",
+        "title": "seoul.walks",
+        "sender": "seoul.walks",
+        "body": "오늘 강바람이 차가워요. 겉옷 챙기세요.",
+        "time": "2026-10-25 12:20",
+        "kind": "post",
+        "folder": "正在关注",
+        "likes": 26,
+        "comments": [
+          "별하나：오늘도 좋은 하루 보내요!\n今天也祝你度过美好的一天。",
+          "moonriver：Thank you for sharing.\n谢谢分享。"
+        ],
+        "meta": {
+          "handle": "seoul.walks",
+          "originalLanguage": "ko",
+          "translationZh": "今天河边风凉，记得带外套。",
+          "fictional": "true"
+        }
+      },
       {
-        "id": "test-item-facebook",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "reddit": [
+        "id": "twitter-post-3",
+        "title": "minseo.daily",
+        "sender": "minseo.daily",
+        "body": "점심은 늦어도 거르지 않기.",
+        "time": "2026-10-25 13:20",
+        "kind": "post",
+        "folder": "正在关注",
+        "likes": 33,
+        "comments": [
+          "별하나：오늘도 좋은 하루 보내요!\n今天也祝你度过美好的一天。",
+          "moonriver：Thank you for sharing.\n谢谢分享。"
+        ],
+        "meta": {
+          "handle": "minseo.daily",
+          "originalLanguage": "ko",
+          "translationZh": "午饭晚一点也不要省掉。",
+          "fictional": "true"
+        }
+      },
       {
-        "id": "test-item-reddit",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
+        "id": "twitter-post-4",
+        "title": "무대뒤의빛",
+        "sender": "무대뒤의빛",
+        "body": "마지막 곡의 여운이 아직 남아 있어요. 여러분은 어땠나요?",
+        "time": "2026-10-25 14:20",
+        "kind": "post",
+        "folder": "发现",
+        "likes": 40,
+        "comments": [
+          "별하나：오늘도 좋은 하루 보내요!\n今天也祝你度过美好的一天。",
+          "moonriver：Thank you for sharing.\n谢谢分享。"
+        ],
+        "meta": {
+          "handle": "무대뒤의빛",
+          "originalLanguage": "ko",
+          "translationZh": "最后一首的余韵还在，大家觉得怎么样？",
+          "fictional": "true"
+        }
+      },
+      {
+        "id": "twitter-post-5",
+        "title": "Sora",
+        "sender": "Sora",
+        "body": "Please respect staff privacy. We can talk about the show without identifying people at work.",
+        "time": "2026-10-25 15:20",
+        "kind": "post",
+        "folder": "发现",
+        "likes": 47,
+        "comments": [
+          "별하나：오늘도 좋은 하루 보내요!\n今天也祝你度过美好的一天。",
+          "moonriver：Thank you for sharing.\n谢谢分享。"
+        ],
+        "meta": {
+          "handle": "Sora",
+          "originalLanguage": "en",
+          "translationZh": "请尊重工作人员隐私，讨论演出就好，不必辨认工作中的人。",
+          "fictional": "true"
+        }
       }
     ],
     "spotify": [
       {
-        "id": "test-item-spotify",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "netflix": [
-      {
-        "id": "test-item-netflix",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "pinterest": [
-      {
-        "id": "test-item-pinterest",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
-    "threads": [
-      {
-        "id": "test-item-threads",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      },
-      {
-        "id": "test-threads-message-1",
-        "title": "测试会话1",
-        "body": "这是一条测试消息。",
-        "sender": "测试联系人1",
-        "folder": "私信"
-      },
-      {
-        "id": "test-threads-activity-1",
-        "title": "测试动态1",
-        "body": "这是一条测试回复动态。",
-        "sender": "测试用户1",
+        "id": "song-0",
+        "title": "Take You Home",
+        "body": "BAEKHYUN",
+        "sender": "BAEKHYUN",
+        "kind": "audio",
+        "folder": "工作结束以后",
         "meta": {
-          "activityType": "reply"
+          "artist": "BAEKHYUN",
+          "album": "工作结束以后",
+          "duration": "03:30"
         }
       },
       {
-        "id": "test-threads-message-2",
-        "title": "测试会话2",
-        "body": "这是一条测试消息。",
-        "sender": "测试联系人2",
-        "folder": "私信"
-      },
-      {
-        "id": "test-threads-activity-2",
-        "title": "测试动态2",
-        "body": "这是一条测试回复动态。",
-        "sender": "测试用户2",
+        "id": "song-1",
+        "title": "Love Again",
+        "body": "BAEKHYUN",
+        "sender": "BAEKHYUN",
+        "kind": "audio",
+        "folder": "工作结束以后",
         "meta": {
-          "activityType": "reply"
+          "artist": "BAEKHYUN",
+          "album": "工作结束以后",
+          "duration": "03:30"
         }
       },
       {
-        "id": "test-threads-message-3",
-        "title": "测试会话3",
-        "body": "这是一条测试消息。",
-        "sender": "测试联系人3",
-        "folder": "私信"
+        "id": "song-2",
+        "title": "My Love",
+        "body": "BAEKHYUN",
+        "sender": "BAEKHYUN",
+        "kind": "audio",
+        "folder": "工作结束以后",
+        "meta": {
+          "artist": "BAEKHYUN",
+          "album": "工作结束以后",
+          "duration": "03:30"
+        }
       },
       {
-        "id": "test-threads-activity-3",
-        "title": "测试动态3",
-        "body": "这是一条测试回复动态。",
-        "sender": "测试用户3",
+        "id": "song-3",
+        "title": "No Problem",
+        "body": "BAEKHYUN",
+        "sender": "BAEKHYUN",
+        "kind": "audio",
+        "folder": "工作结束以后",
         "meta": {
-          "activityType": "reply"
+          "artist": "BAEKHYUN",
+          "album": "工作结束以后",
+          "duration": "03:30"
         }
-      }
-    ],
-    "appstore": [
+      },
       {
-        "id": "test-appstore",
-        "title": "测试内容",
-        "body": "这是一条测试内容。"
+        "id": "song-4",
+        "title": "Late Night Calls",
+        "body": "BAEKHYUN",
+        "sender": "BAEKHYUN",
+        "kind": "audio",
+        "folder": "工作结束以后",
+        "meta": {
+          "artist": "BAEKHYUN",
+          "album": "工作结束以后",
+          "duration": "03:30"
+        }
       }
     ]
   },
   "variables": {},
-  "events": [],
-  "tests": []
+  "events": [
+    {
+      "id": "welcome",
+      "label": "开局提醒",
+      "type": "start",
+      "actions": [
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk · 韩组长：到了先来后台休息室，交接表在群文件里。"
+        }
+      ]
+    },
+    {
+      "id": "read-0",
+      "label": "第一次交接",
+      "event": "read",
+      "target": "stage-0-msg-1",
+      "next": [
+        "decision-0"
+      ]
+    },
+    {
+      "id": "decision-0",
+      "label": "第一次交接 · 你的回应",
+      "type": "choice",
+      "next": [
+        "option-0-0",
+        "option-0-1"
+      ]
+    },
+    {
+      "id": "option-0-0",
+      "label": "收到，到了联系你。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-0-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "scene-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-1",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-10-25"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "07:40"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "好，后台见。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "备忘录 · 现场：先吃饭"
+        }
+      ]
+    },
+    {
+      "id": "option-0-1",
+      "label": "我先确认路线和职责。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-0-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "scene-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-1",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-10-25"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "07:40"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "慢慢来，不清楚的直接问。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "备忘录 · 现场：先吃饭"
+        }
+      ]
+    },
+    {
+      "id": "read-1",
+      "label": "先吃饭",
+      "event": "read",
+      "target": "scene-1",
+      "next": [
+        "decision-1"
+      ]
+    },
+    {
+      "id": "decision-1",
+      "label": "先吃饭 · 你的回应",
+      "type": "choice",
+      "next": [
+        "option-1-0",
+        "option-1-1"
+      ]
+    },
+    {
+      "id": "option-1-0",
+      "label": "当然不用，我们可以先吃饭。有些东西需要当面确认。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-1-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-2-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-2-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-2",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-10-26"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "09:10"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "他把笔放回桌上：“那我先吃。看来今天不用拿问卷换早餐。”"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：第一次直接联系"
+        }
+      ]
+    },
+    {
+      "id": "option-1-1",
+      "label": "写过的不用重复，你先吃。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-1-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-2-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-2-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-2",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-10-26"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "09:10"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "“这样最好。我不太想一早把同样的话再说一遍。”"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：第一次直接联系"
+        }
+      ]
+    },
+    {
+      "id": "read-2",
+      "label": "第一次直接联系",
+      "event": "read",
+      "target": "stage-2-msg-1",
+      "next": [
+        "decision-2"
+      ]
+    },
+    {
+      "id": "decision-2",
+      "label": "第一次直接联系 · 你的回应",
+      "type": "choice",
+      "next": [
+        "option-2-0",
+        "option-2-1"
+      ]
+    },
+    {
+      "id": "option-2-0",
+      "label": "不急，今天需要确认的已经完成了。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-2-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "scene-3",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-3",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-11-01"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "20:30"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "知道了。谢谢。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "备忘录 · 现场：收工餐食"
+        }
+      ]
+    },
+    {
+      "id": "option-2-1",
+      "label": "我整理成简版，以后不用每次重填。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-2-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "scene-3",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-3",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-11-01"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "20:30"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "能少填一遍的话，我会认真看。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "备忘录 · 现场：收工餐食"
+        }
+      ]
+    },
+    {
+      "id": "read-3",
+      "label": "收工餐食",
+      "event": "read",
+      "target": "scene-3",
+      "next": [
+        "decision-3"
+      ]
+    },
+    {
+      "id": "decision-3",
+      "label": "收工餐食 · 你的回应",
+      "type": "choice",
+      "next": [
+        "option-3-0",
+        "option-3-1"
+      ]
+    },
+    {
+      "id": "option-3-0",
+      "label": "拿了，送完这两份就吃。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-3-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "scene-4",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-4",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-11-08"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "14:30"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "“好。别送完又被叫去做别的。”"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "备忘录 · 现场：下雨的转场"
+        }
+      ]
+    },
+    {
+      "id": "option-3-1",
+      "label": "还没，记录快写完了。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-3-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "scene-4",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-4",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-11-08"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "14:30"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "“那份先放着。吃完再写，我这边没有急事。”"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "备忘录 · 现场：下雨的转场"
+        }
+      ]
+    },
+    {
+      "id": "read-4",
+      "label": "下雨的转场",
+      "event": "read",
+      "target": "scene-4",
+      "next": [
+        "decision-4"
+      ]
+    },
+    {
+      "id": "decision-4",
+      "label": "下雨的转场 · 你的回应",
+      "type": "choice",
+      "next": [
+        "option-4-0",
+        "option-4-1",
+        "option-4-2"
+      ]
+    },
+    {
+      "id": "option-4-0",
+      "label": "一起走，车牌路上确认。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-4-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "scene-5",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-5",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-11-08"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "18:10"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "他把伞往{{player}}这边偏了偏：“那你看路。我不想第二周就换健康管理师。”"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "备忘录 · 现场：旧采访"
+        }
+      ]
+    },
+    {
+      "id": "option-4-1",
+      "label": "你先走，我等下一把。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-4-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "scene-5",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-5",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-11-08"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "18:10"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "“好。别站风口。”几分钟后，敏书带着备用伞折回来。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "备忘录 · 现场：旧采访"
+        }
+      ]
+    },
+    {
+      "id": "option-4-2",
+      "label": "担心员工，还是担心没人管你？",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-4-2",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "scene-5",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-5",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-11-08"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "18:10"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "“都有。”他笑了，“第二个更现实一点。”"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "备忘录 · 现场：旧采访"
+        }
+      ]
+    },
+    {
+      "id": "read-5",
+      "label": "旧采访",
+      "event": "read",
+      "target": "scene-5",
+      "next": [
+        "decision-5"
+      ]
+    },
+    {
+      "id": "decision-5",
+      "label": "旧采访 · 你的回应",
+      "type": "choice",
+      "next": [
+        "option-5-0",
+        "option-5-1"
+      ]
+    },
+    {
+      "id": "option-5-0",
+      "label": "入职前查过公开资料，现在还是以你本人说的为准。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-5-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-6-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-6-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-6",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-11-09"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "19:20"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "他点点头：“做过功课。旧采访有些是当时的情况，拿不准就问我。”"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：论坛里的新面孔"
+        }
+      ]
+    },
+    {
+      "id": "option-5-1",
+      "label": "以前关注过你，入职前又整理了一次。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-5-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-6-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-6-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-6",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-11-09"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "19:20"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "“这样啊。”他停了停，“工作里要确认的，还是直接问我。”"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：论坛里的新面孔"
+        }
+      ]
+    },
+    {
+      "id": "read-6",
+      "label": "论坛里的新面孔",
+      "event": "read",
+      "target": "stage-6-msg-1",
+      "next": [
+        "decision-6"
+      ]
+    },
+    {
+      "id": "decision-6",
+      "label": "论坛里的新面孔 · 你的回应",
+      "type": "choice",
+      "next": [
+        "option-6-0",
+        "option-6-1"
+      ]
+    },
+    {
+      "id": "option-6-0",
+      "label": "只看，不回复。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-6-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-7-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-7",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-11-15"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "10:05"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "帖子继续沉下去，没有人围着一个陌生工作人员讨论。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：时间更正"
+        }
+      ]
+    },
+    {
+      "id": "option-6-1",
+      "label": "把清晰截图链接发给韩组长。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-6-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-7-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-7",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-11-15"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "10:05"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "韩组长：收到。先留原链接，不用自己解释。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：时间更正"
+        }
+      ]
+    },
+    {
+      "id": "read-7",
+      "label": "时间更正",
+      "event": "read",
+      "target": "stage-7-msg-0",
+      "next": [
+        "decision-7"
+      ]
+    },
+    {
+      "id": "decision-7",
+      "label": "时间更正 · 你的回应",
+      "type": "choice",
+      "next": [
+        "option-7-0",
+        "option-7-1"
+      ]
+    },
+    {
+      "id": "option-7-0",
+      "label": "刚收到，我核对后重发。谢谢提醒。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-7-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-8-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-8-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-8-msg-2",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-8",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-11-16"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "21:08"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "嗯。别两边都赶，按新时间就行。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：保管错的雨伞"
+        }
+      ]
+    },
+    {
+      "id": "option-7-1",
+      "label": "我先找敏书确认。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-7-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-8-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-8-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-8-msg-2",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-8",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-11-16"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "21:08"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "好，确认完告诉大家。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：保管错的雨伞"
+        }
+      ]
+    },
+    {
+      "id": "read-8",
+      "label": "保管错的雨伞",
+      "event": "read",
+      "target": "stage-8-msg-2",
+      "next": [
+        "decision-8"
+      ]
+    },
+    {
+      "id": "decision-8",
+      "label": "保管错的雨伞 · 你的回应",
+      "type": "choice",
+      "next": [
+        "option-8-0",
+        "option-8-1"
+      ]
+    },
+    {
+      "id": "option-8-0",
+      "label": "也可以认真保管，明天还回去。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-8-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-9-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-9",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-11-17"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "20:40"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "收到。物资箱的伞享受了一晚单独保管。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：十分钟"
+        }
+      ]
+    },
+    {
+      "id": "option-8-1",
+      "label": "放前台就行。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-8-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-9-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-9",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-11-17"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "20:40"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "好。明天见。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：十分钟"
+        }
+      ]
+    },
+    {
+      "id": "read-9",
+      "label": "十分钟",
+      "event": "read",
+      "target": "stage-9-msg-0",
+      "next": [
+        "decision-9"
+      ]
+    },
+    {
+      "id": "decision-9",
+      "label": "十分钟 · 你的回应",
+      "type": "choice",
+      "next": [
+        "option-9-0",
+        "option-9-1"
+      ]
+    },
+    {
+      "id": "option-9-0",
+      "label": "可以。没有紧急情况的话，十分钟后再来。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-9-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-10-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-10-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-10",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-11-22"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "14:30"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "没有新的不舒服。十分钟后见。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：知道什么时候离开"
+        }
+      ]
+    },
+    {
+      "id": "option-9-1",
+      "label": "我先和医生确认能不能延后。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-9-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-10-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-10-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-10",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-11-22"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "14:30"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "好。你确认完告诉我。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：知道什么时候离开"
+        }
+      ]
+    },
+    {
+      "id": "read-10",
+      "label": "知道什么时候离开",
+      "event": "read",
+      "target": "stage-10-msg-1",
+      "next": [
+        "decision-10"
+      ]
+    },
+    {
+      "id": "decision-10",
+      "label": "知道什么时候离开 · 你的回应",
+      "type": "choice",
+      "next": [
+        "option-10-0",
+        "option-10-1"
+      ]
+    },
+    {
+      "id": "option-10-0",
+      "label": "我就在外面，有情况叫我。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-10-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "scene-11",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-11",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-11-22"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "16:40"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "嗯。你不站在那里，我反而比较快休息好。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "备忘录 · 现场：自动贩卖机"
+        }
+      ]
+    },
+    {
+      "id": "option-10-1",
+      "label": "这是我的工作，不用谢。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-10-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "scene-11",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-11",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-11-22"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "16:40"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "工作也可以说谢谢。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "备忘录 · 现场：自动贩卖机"
+        }
+      ]
+    },
+    {
+      "id": "read-11",
+      "label": "自动贩卖机",
+      "event": "read",
+      "target": "scene-11",
+      "next": [
+        "decision-11"
+      ]
+    },
+    {
+      "id": "decision-11",
+      "label": "自动贩卖机 · 你的回应",
+      "type": "choice",
+      "next": [
+        "option-11-0",
+        "option-11-1",
+        "option-11-2"
+      ]
+    },
+    {
+      "id": "option-11-0",
+      "label": "我去找场馆人员，别再投了。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-11-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-12-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-12-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-12",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-11-23"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "18:20"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "“你现在很像在阻止我做危险动作。”"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：贩卖机债务"
+        }
+      ]
+    },
+    {
+      "id": "option-11-1",
+      "label": "先拿我的，明天还我一瓶。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-11-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-12-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-12-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-12",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-11-23"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "18:20"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "他看了眼口味：“这个我会记住。欠别人的比较麻烦。”"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：贩卖机债务"
+        }
+      ]
+    },
+    {
+      "id": "option-11-2",
+      "label": "再投一次，也许它在确认诚意。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-11-2",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-12-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-12-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-12",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-11-23"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "18:20"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "“你站在机器那边？”他还是笑了。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：贩卖机债务"
+        }
+      ]
+    },
+    {
+      "id": "read-12",
+      "label": "贩卖机债务",
+      "event": "read",
+      "target": "stage-12-msg-1",
+      "next": [
+        "decision-12"
+      ]
+    },
+    {
+      "id": "decision-12",
+      "label": "贩卖机债务 · 你的回应",
+      "type": "choice",
+      "next": [
+        "option-12-0",
+        "option-12-1"
+      ]
+    },
+    {
+      "id": "option-12-0",
+      "label": "利息呢？",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-12-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "scene-13",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-13",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-11-24"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "17:30"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "你先说利率。我判断要不要逃跑。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "备忘录 · 现场：车上的歌"
+        }
+      ]
+    },
+    {
+      "id": "option-12-1",
+      "label": "已确认收到。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-12-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "scene-13",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-13",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-11-24"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "17:30"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "这么正式？那我也申请一张确认单。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "备忘录 · 现场：车上的歌"
+        }
+      ]
+    },
+    {
+      "id": "read-13",
+      "label": "车上的歌",
+      "event": "read",
+      "target": "scene-13",
+      "next": [
+        "decision-13"
+      ]
+    },
+    {
+      "id": "decision-13",
+      "label": "车上的歌 · 你的回应",
+      "type": "choice",
+      "next": [
+        "option-13-0",
+        "option-13-1"
+      ]
+    },
+    {
+      "id": "option-13-0",
+      "label": "这首我也听过。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-13-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-14-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-14-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-14",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-11-29"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "21:00"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "“那今天选歌的人至少赢两票。”"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：记住的那一首"
+        }
+      ]
+    },
+    {
+      "id": "option-13-1",
+      "label": "我想知道歌名。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-13-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-14-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-14-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-14",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-11-29"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "21:00"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "敏书发进群里。伯贤：“不是新工作通知。”"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：记住的那一首"
+        }
+      ]
+    },
+    {
+      "id": "read-14",
+      "label": "记住的那一首",
+      "event": "read",
+      "target": "stage-14-msg-1",
+      "next": [
+        "decision-14"
+      ]
+    },
+    {
+      "id": "decision-14",
+      "label": "记住的那一首 · 你的回应",
+      "type": "choice",
+      "next": [
+        "option-14-0",
+        "option-14-1"
+      ]
+    },
+    {
+      "id": "option-14-0",
+      "label": "我后来又听了一遍。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-14-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-15-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-15-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-15-msg-2",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-15",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-12-01"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "18:30"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "那我没记错。你更喜欢哪一段？"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：第一次发现她不在"
+        }
+      ]
+    },
+    {
+      "id": "option-14-1",
+      "label": "你居然还记得。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-14-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-15-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-15-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-15-msg-2",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-15",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-12-01"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "18:30"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "你当时跟着节奏点头，很难完全没看到。 {{player}}：所以你那时候在看我？ …… 他没有回答，只把歌曲卡片又发了一遍。 伯贤：你还没说，更喜欢哪一段。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：第一次发现她不在"
+        }
+      ]
+    },
+    {
+      "id": "read-15",
+      "label": "第一次发现她不在",
+      "event": "read",
+      "target": "stage-15-msg-2",
+      "next": [
+        "decision-15"
+      ]
+    },
+    {
+      "id": "decision-15",
+      "label": "第一次发现她不在 · 你的回应",
+      "type": "choice",
+      "next": [
+        "option-15-0",
+        "option-15-1"
+      ]
+    },
+    {
+      "id": "option-15-0",
+      "label": "终于不用设早起闹钟了。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-15-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-16-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-16-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-16",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-12-06"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "23:10"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "不要故意告诉我你能睡懒觉。我明天还是要早起。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：撤回的半条消息"
+        }
+      ]
+    },
+    {
+      "id": "option-15-1",
+      "label": "交接已经写清楚了。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-15-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-16-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-16-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-16",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-12-06"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "23:10"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "嗯。那你好好休息。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：撤回的半条消息"
+        }
+      ]
+    },
+    {
+      "id": "read-16",
+      "label": "撤回的半条消息",
+      "event": "read",
+      "target": "stage-16-msg-1",
+      "next": [
+        "decision-16"
+      ]
+    },
+    {
+      "id": "decision-16",
+      "label": "撤回的半条消息 · 你的回应",
+      "type": "choice",
+      "next": [
+        "option-16-0",
+        "option-16-1",
+        "option-16-2"
+      ]
+    },
+    {
+      "id": "option-16-0",
+      "label": "休息也可以回答店的问题。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-16-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "scene-17",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-17",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-12-13"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "14:00"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "不是工作。我问了的话，好像会变成打扰。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "备忘录 · 现场：名字与利息"
+        }
+      ]
+    },
+    {
+      "id": "option-16-1",
+      "label": "那下次见面再问。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-16-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "scene-17",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-17",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-12-13"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "14:00"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "好，我记着。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "备忘录 · 现场：名字与利息"
+        }
+      ]
+    },
+    {
+      "id": "option-16-2",
+      "label": "今天想彻底离线。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-16-2",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "scene-17",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-17",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-12-13"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "14:00"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "知道了。明天见。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "备忘录 · 现场：名字与利息"
+        }
+      ]
+    },
+    {
+      "id": "read-17",
+      "label": "名字与利息",
+      "event": "read",
+      "target": "scene-17",
+      "next": [
+        "decision-17"
+      ]
+    },
+    {
+      "id": "decision-17",
+      "label": "名字与利息 · 你的回应",
+      "type": "choice",
+      "next": [
+        "option-17-0",
+        "option-17-1",
+        "option-17-2"
+      ]
+    },
+    {
+      "id": "option-17-0",
+      "label": "今天怎么突然叫名字？",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-17-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-18-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-18-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-18",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-12-14"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "16:40"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "他停了一下：“不可以吗？”"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：Instagram Story"
+        }
+      ]
+    },
+    {
+      "id": "option-17-1",
+      "label": "你已经叫了才问？",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-17-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-18-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-18-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-18",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-12-14"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "16:40"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "“所以是在补手续。”"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：Instagram Story"
+        }
+      ]
+    },
+    {
+      "id": "option-17-2",
+      "label": "工作时还是叫职位比较好。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-17-2",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-18-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-18-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-18",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-12-14"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "16:40"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "“好，我会注意。”"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：Instagram Story"
+        }
+      ]
+    },
+    {
+      "id": "read-18",
+      "label": "Instagram Story",
+      "event": "read",
+      "target": "stage-18-msg-1",
+      "next": [
+        "decision-18"
+      ]
+    },
+    {
+      "id": "decision-18",
+      "label": "Instagram Story · 你的回应",
+      "type": "choice",
+      "next": [
+        "option-18-0",
+        "option-18-1"
+      ]
+    },
+    {
+      "id": "option-18-0",
+      "label": "看起来天气很好。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-18-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-19-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-19-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-19",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-12-20"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "18:10"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "照片比实际拍得好。风很大。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：只发给{{player}}的照片"
+        }
+      ]
+    },
+    {
+      "id": "option-18-1",
+      "label": "你今天按时吃饭了吗？",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-18-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-19-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-19-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-19",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-12-20"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "18:10"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "现在不是工作时间，不接受检查ㅋㅋ {{player}}：那我撤回。 也不用撤得这么快。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：只发给{{player}}的照片"
+        }
+      ]
+    },
+    {
+      "id": "read-19",
+      "label": "只发给{{player}}的照片",
+      "event": "read",
+      "target": "stage-19-msg-1",
+      "next": [
+        "decision-19"
+      ]
+    },
+    {
+      "id": "decision-19",
+      "label": "只发给{{player}}的照片 · 你的回应",
+      "type": "choice",
+      "next": [
+        "option-19-0",
+        "option-19-1"
+      ]
+    },
+    {
+      "id": "option-19-0",
+      "label": "不是，不过尾巴也很像问号。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-19-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "scene-20",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-20",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-12-20"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "22:00"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "那我认错了。它刚才看我的表情也差不多。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "备忘录 · 现场：便利店夜宵"
+        }
+      ]
+    },
+    {
+      "id": "option-19-1",
+      "label": "你竟然还记得。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-19-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "scene-20",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-20",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-12-20"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "22:00"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "你那天讲得很认真。忘了的话，好像显得我没听。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "备忘录 · 现场：便利店夜宵"
+        }
+      ]
+    },
+    {
+      "id": "read-20",
+      "label": "便利店夜宵",
+      "event": "read",
+      "target": "scene-20",
+      "next": [
+        "decision-20"
+      ]
+    },
+    {
+      "id": "decision-20",
+      "label": "便利店夜宵 · 你的回应",
+      "type": "choice",
+      "next": [
+        "option-20-0",
+        "option-20-1",
+        "option-20-2"
+      ]
+    },
+    {
+      "id": "option-20-0",
+      "label": "鱼饼汤。现在太晚了。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-20-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-21-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-21-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-21-msg-2",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-21",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-12-27"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "23:10"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "“这回答很像工作建议。”他看了{{player}}一眼，“那你不工作的时候呢？”"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：都没有先挂断"
+        }
+      ]
+    },
+    {
+      "id": "option-20-1",
+      "label": "两个都要。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-20-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-21-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-21-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-21-msg-2",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-21",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-12-27"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "23:10"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "“终于听到不像交接表的答案了。”"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：都没有先挂断"
+        }
+      ]
+    },
+    {
+      "id": "option-20-2",
+      "label": "你先选，我不负责。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-20-2",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-21-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-21-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-21-msg-2",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-21",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-12-27"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "23:10"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "“今天很严格。”他笑着自己拿了鱼饼汤。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：都没有先挂断"
+        }
+      ]
+    },
+    {
+      "id": "read-21",
+      "label": "都没有先挂断",
+      "event": "read",
+      "target": "stage-21-msg-2",
+      "next": [
+        "decision-21"
+      ]
+    },
+    {
+      "id": "decision-21",
+      "label": "都没有先挂断 · 你的回应",
+      "type": "choice",
+      "next": [
+        "option-21-0",
+        "option-21-1"
+      ]
+    },
+    {
+      "id": "option-21-0",
+      "label": "你也没挂。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-21-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-22-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-22-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-22",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-12-28"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "20:30"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "那一起数三下？ 数到二，他先笑了：算了。明天见。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：工作以外的问题"
+        }
+      ]
+    },
+    {
+      "id": "option-21-1",
+      "label": "还有别的想说吗？",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-21-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-22-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-22-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-22",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2026-12-28"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "20:30"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "有一点。 …… 不过现在说，好像不太合适。下次吧。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：工作以外的问题"
+        }
+      ]
+    },
+    {
+      "id": "read-22",
+      "label": "工作以外的问题",
+      "event": "read",
+      "target": "stage-22-msg-1",
+      "next": [
+        "decision-22"
+      ]
+    },
+    {
+      "id": "decision-22",
+      "label": "工作以外的问题 · 你的回应",
+      "type": "choice",
+      "next": [
+        "option-22-0",
+        "option-22-1",
+        "option-22-2"
+      ]
+    },
+    {
+      "id": "option-22-0",
+      "label": "想去，但先确认不会影响工作。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-22-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "scene-23",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-23",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2027-01-03"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "17:00"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "好。别让它变成你休息日还要照顾我。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "备忘录 · 现场：过去的关注"
+        }
+      ]
+    },
+    {
+      "id": "option-22-1",
+      "label": "我现在想保持工作关系。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-22-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "scene-23",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-23",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2027-01-03"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "17:00"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "知道了。工作照旧，你不用躲着我。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "备忘录 · 现场：过去的关注"
+        }
+      ]
+    },
+    {
+      "id": "option-22-2",
+      "label": "答应前，我有件事想说清楚。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-22-2",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "scene-23",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-23",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2027-01-03"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "17:00"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "好。我们当面说。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "备忘录 · 现场：过去的关注"
+        }
+      ]
+    },
+    {
+      "id": "read-23",
+      "label": "过去的关注",
+      "event": "read",
+      "target": "scene-23",
+      "next": [
+        "decision-23"
+      ]
+    },
+    {
+      "id": "decision-23",
+      "label": "过去的关注 · 你的回应",
+      "type": "choice",
+      "next": [
+        "option-23-0",
+        "option-23-1",
+        "option-23-2"
+      ]
+    },
+    {
+      "id": "option-23-0",
+      "label": "我还在认识你，不想说得太满。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-23-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "scene-24",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-24",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2027-01-10"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "18:30"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "“好。那就一件一件分开。”"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "备忘录 · 现场：第一次工作外见面"
+        }
+      ]
+    },
+    {
+      "id": "option-23-1",
+      "label": "你比想象中更会记仇，尤其是贩卖机。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-23-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "scene-24",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-24",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2027-01-10"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "18:30"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "他笑出来：“这个可以继续了解。”"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "备忘录 · 现场：第一次工作外见面"
+        }
+      ]
+    },
+    {
+      "id": "option-23-2",
+      "label": "我还没整理好。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-23-2",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "scene-24",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-24",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2027-01-10"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "18:30"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "“那先不用给答案。”"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "备忘录 · 现场：第一次工作外见面"
+        }
+      ]
+    },
+    {
+      "id": "read-24",
+      "label": "第一次工作外见面",
+      "event": "read",
+      "target": "scene-24",
+      "next": [
+        "decision-24"
+      ]
+    },
+    {
+      "id": "decision-24",
+      "label": "第一次工作外见面 · 你的回应",
+      "type": "choice",
+      "next": [
+        "option-24-0",
+        "option-24-1"
+      ]
+    },
+    {
+      "id": "option-24-0",
+      "label": "要看你有没有漏最后一项。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-24-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "scene-25",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-25",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2027-01-10"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "20:00"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "“第一次见面那件事你还记得？”{{player}}看着他：“你不也记得。”"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "备忘录 · 现场：手冷吗"
+        }
+      ]
+    },
+    {
+      "id": "option-24-1",
+      "label": "今天不谈表。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-24-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "scene-25",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-25",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2027-01-10"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "20:00"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "“好。”他把菜单推过来，“那先说你想吃什么。”"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "备忘录 · 现场：手冷吗"
+        }
+      ]
+    },
+    {
+      "id": "read-25",
+      "label": "手冷吗",
+      "event": "read",
+      "target": "scene-25",
+      "next": [
+        "decision-25"
+      ]
+    },
+    {
+      "id": "decision-25",
+      "label": "手冷吗 · 你的回应",
+      "type": "choice",
+      "next": [
+        "option-25-0",
+        "option-25-1",
+        "option-25-2"
+      ]
+    },
+    {
+      "id": "option-25-0",
+      "label": "有一点。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-25-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-26-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-26-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-26-msg-2",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-26",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2027-01-10"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "21:30"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "他把没拆封的暖宝宝递过来：“这个比我可靠。”"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：不是例行确认"
+        }
+      ]
+    },
+    {
+      "id": "option-25-1",
+      "label": "你问这个，是有解决办法吗？",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-25-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-26-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-26-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-26-msg-2",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-26",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2027-01-10"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "21:30"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "他看了眼{{player}}伸出的手：“有。但我想先确认你是真的愿意。” {{player}}再次点头后，他才握住。到路口时自然松开。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：不是例行确认"
+        }
+      ]
+    },
+    {
+      "id": "option-25-2",
+      "label": "还好。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-25-2",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-26-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-26-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-26-msg-2",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-26",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2027-01-10"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "21:30"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "“那走慢一点，前面路滑。”"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：不是例行确认"
+        }
+      ]
+    },
+    {
+      "id": "read-26",
+      "label": "不是例行确认",
+      "event": "read",
+      "target": "stage-26-msg-2",
+      "next": [
+        "decision-26"
+      ]
+    },
+    {
+      "id": "decision-26",
+      "label": "不是例行确认 · 你的回应",
+      "type": "choice",
+      "next": [
+        "option-26-0",
+        "option-26-1"
+      ]
+    },
+    {
+      "id": "option-26-0",
+      "label": "那是什么？",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-26-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-27-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-27-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-27",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2027-01-17"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "11:20"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "是我想知道。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：被裁剪的照片"
+        }
+      ]
+    },
+    {
+      "id": "option-26-1",
+      "label": "你也到了吗？",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-26-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-27-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-27-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-27",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2027-01-17"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "11:20"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "刚到。现在可以一起结束今天了。晚安。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：被裁剪的照片"
+        }
+      ]
+    },
+    {
+      "id": "read-27",
+      "label": "被裁剪的照片",
+      "event": "read",
+      "target": "stage-27-msg-1",
+      "next": [
+        "decision-27"
+      ]
+    },
+    {
+      "id": "decision-27",
+      "label": "被裁剪的照片 · 你的回应",
+      "type": "choice",
+      "next": [
+        "option-27-0",
+        "option-27-1"
+      ]
+    },
+    {
+      "id": "option-27-0",
+      "label": "按流程提交链接和截图。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-27-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-28-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-28-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-28-msg-2",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-28-msg-3",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-28",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2027-01-24"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "21:00"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "看到了。今晚先别再看论坛。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：只是突然想到你"
+        }
+      ]
+    },
+    {
+      "id": "option-27-1",
+      "label": "暂时不看，委托组长通知进展。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-27-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-28-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-28-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-28-msg-2",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-28-msg-3",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-28",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2027-01-24"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "21:00"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "好。需要知道的，我让他们直接告诉你。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：只是突然想到你"
+        }
+      ]
+    },
+    {
+      "id": "read-28",
+      "label": "只是突然想到你",
+      "event": "read",
+      "target": "stage-28-msg-3",
+      "next": [
+        "decision-28"
+      ]
+    },
+    {
+      "id": "decision-28",
+      "label": "只是突然想到你 · 你的回应",
+      "type": "choice",
+      "next": [
+        "option-28-0",
+        "option-28-1",
+        "option-28-2"
+      ]
+    },
+    {
+      "id": "option-28-0",
+      "label": "我也想你。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-28-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-29-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-29-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-29",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2027-01-31"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "15:30"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "这句我先收着。等事情处理完，我们当面说。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：事实核对完成"
+        }
+      ]
+    },
+    {
+      "id": "option-28-1",
+      "label": "想到我，还是债务管理员？",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-28-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-29-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-29-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-29",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2027-01-31"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "15:30"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "先想到管理员。然后发现不是工作时间。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：事实核对完成"
+        }
+      ]
+    },
+    {
+      "id": "option-28-2",
+      "label": "先把事情处理好。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-28-2",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-29-msg-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "stage-29-msg-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-29",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2027-01-31"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "15:30"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "嗯。你说得对。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "KakaoTalk：事实核对完成"
+        }
+      ]
+    },
+    {
+      "id": "read-29",
+      "label": "事实核对完成",
+      "event": "read",
+      "target": "stage-29-msg-1",
+      "next": [
+        "decision-29"
+      ]
+    },
+    {
+      "id": "decision-29",
+      "label": "事实核对完成 · 你的回应",
+      "type": "choice",
+      "next": [
+        "option-29-0",
+        "option-29-1"
+      ]
+    },
+    {
+      "id": "option-29-0",
+      "label": "继续现岗位，但重新划分汇报关系。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-29-0",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "scene-30",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-30",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2027-02-07"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "15:00"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "韩组长：可以，下周写进新交接。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "备忘录 · 现场：工作时间之外"
+        }
+      ]
+    },
+    {
+      "id": "option-29-1",
+      "label": "申请调整职责。",
+      "type": "action",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-29-1",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "scene-30",
+          "value": true
+        },
+        {
+          "type": "unlock",
+          "key": "calendar-30",
+          "value": true
+        },
+        {
+          "type": "date",
+          "key": "",
+          "value": "2027-02-07"
+        },
+        {
+          "type": "time",
+          "key": "",
+          "value": "15:00"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "韩组长：收到。先保护双方边界。"
+        },
+        {
+          "type": "notification",
+          "key": "",
+          "value": "备忘录 · 现场：工作时间之外"
+        }
+      ]
+    },
+    {
+      "id": "read-30",
+      "label": "工作时间之外",
+      "event": "read",
+      "target": "scene-30",
+      "next": [
+        "decision-30"
+      ]
+    },
+    {
+      "id": "decision-30",
+      "label": "工作时间之外 · 你的回应",
+      "type": "choice",
+      "next": [
+        "option-30-0",
+        "option-30-1",
+        "option-30-2",
+        "option-30-3"
+      ]
+    },
+    {
+      "id": "option-30-0",
+      "label": "我愿意试着了解工作以外的你。",
+      "type": "ending",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-30-0",
+          "value": true
+        },
+        {
+          "type": "ending",
+          "key": "",
+          "value": "工作时间之外：你们决定在工作之外认真了解彼此。"
+        }
+      ]
+    },
+    {
+      "id": "option-30-1",
+      "label": "我喜欢现在的靠近，但还想慢一点。",
+      "type": "ending",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-30-1",
+          "value": true
+        },
+        {
+          "type": "ending",
+          "key": "",
+          "value": "慢慢来：你们保留联系，给彼此更多时间。"
+        }
+      ]
+    },
+    {
+      "id": "option-30-2",
+      "label": "我更希望继续做可靠的同事。",
+      "type": "ending",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-30-2",
+          "value": true
+        },
+        {
+          "type": "ending",
+          "key": "",
+          "value": "可靠的同事：你选择把这段关系留在清晰的工作边界内。"
+        }
+      ]
+    },
+    {
+      "id": "option-30-3",
+      "label": "我想先离开这份工作。",
+      "type": "ending",
+      "actions": [
+        {
+          "type": "unlock",
+          "key": "reply-30-3",
+          "value": true
+        },
+        {
+          "type": "ending",
+          "key": "",
+          "value": "新的起点：你调整了工作方向，把以后的选择留给自己。"
+        }
+      ]
+    }
+  ],
+  "tests": [
+    {
+      "name": "ending-0",
+      "steps": [
+        {
+          "event": "read",
+          "target": "stage-0-msg-1"
+        },
+        {
+          "choose": "option-0-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-1"
+        },
+        {
+          "choose": "option-1-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-2-msg-1"
+        },
+        {
+          "choose": "option-2-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-3"
+        },
+        {
+          "choose": "option-3-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-4"
+        },
+        {
+          "choose": "option-4-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-5"
+        },
+        {
+          "choose": "option-5-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-6-msg-1"
+        },
+        {
+          "choose": "option-6-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-7-msg-0"
+        },
+        {
+          "choose": "option-7-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-8-msg-2"
+        },
+        {
+          "choose": "option-8-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-9-msg-0"
+        },
+        {
+          "choose": "option-9-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-10-msg-1"
+        },
+        {
+          "choose": "option-10-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-11"
+        },
+        {
+          "choose": "option-11-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-12-msg-1"
+        },
+        {
+          "choose": "option-12-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-13"
+        },
+        {
+          "choose": "option-13-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-14-msg-1"
+        },
+        {
+          "choose": "option-14-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-15-msg-2"
+        },
+        {
+          "choose": "option-15-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-16-msg-1"
+        },
+        {
+          "choose": "option-16-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-17"
+        },
+        {
+          "choose": "option-17-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-18-msg-1"
+        },
+        {
+          "choose": "option-18-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-19-msg-1"
+        },
+        {
+          "choose": "option-19-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-20"
+        },
+        {
+          "choose": "option-20-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-21-msg-2"
+        },
+        {
+          "choose": "option-21-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-22-msg-1"
+        },
+        {
+          "choose": "option-22-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-23"
+        },
+        {
+          "choose": "option-23-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-24"
+        },
+        {
+          "choose": "option-24-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-25"
+        },
+        {
+          "choose": "option-25-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-26-msg-2"
+        },
+        {
+          "choose": "option-26-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-27-msg-1"
+        },
+        {
+          "choose": "option-27-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-28-msg-3"
+        },
+        {
+          "choose": "option-28-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-29-msg-1"
+        },
+        {
+          "choose": "option-29-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-30"
+        },
+        {
+          "choose": "option-30-0"
+        }
+      ],
+      "ending": "工作时间之外：你们决定在工作之外认真了解彼此。",
+      "expectUnlocked": [
+        "scene-30"
+      ]
+    },
+    {
+      "name": "ending-1",
+      "steps": [
+        {
+          "event": "read",
+          "target": "stage-0-msg-1"
+        },
+        {
+          "choose": "option-0-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-1"
+        },
+        {
+          "choose": "option-1-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-2-msg-1"
+        },
+        {
+          "choose": "option-2-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-3"
+        },
+        {
+          "choose": "option-3-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-4"
+        },
+        {
+          "choose": "option-4-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-5"
+        },
+        {
+          "choose": "option-5-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-6-msg-1"
+        },
+        {
+          "choose": "option-6-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-7-msg-0"
+        },
+        {
+          "choose": "option-7-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-8-msg-2"
+        },
+        {
+          "choose": "option-8-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-9-msg-0"
+        },
+        {
+          "choose": "option-9-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-10-msg-1"
+        },
+        {
+          "choose": "option-10-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-11"
+        },
+        {
+          "choose": "option-11-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-12-msg-1"
+        },
+        {
+          "choose": "option-12-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-13"
+        },
+        {
+          "choose": "option-13-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-14-msg-1"
+        },
+        {
+          "choose": "option-14-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-15-msg-2"
+        },
+        {
+          "choose": "option-15-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-16-msg-1"
+        },
+        {
+          "choose": "option-16-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-17"
+        },
+        {
+          "choose": "option-17-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-18-msg-1"
+        },
+        {
+          "choose": "option-18-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-19-msg-1"
+        },
+        {
+          "choose": "option-19-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-20"
+        },
+        {
+          "choose": "option-20-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-21-msg-2"
+        },
+        {
+          "choose": "option-21-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-22-msg-1"
+        },
+        {
+          "choose": "option-22-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-23"
+        },
+        {
+          "choose": "option-23-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-24"
+        },
+        {
+          "choose": "option-24-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-25"
+        },
+        {
+          "choose": "option-25-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-26-msg-2"
+        },
+        {
+          "choose": "option-26-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-27-msg-1"
+        },
+        {
+          "choose": "option-27-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-28-msg-3"
+        },
+        {
+          "choose": "option-28-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-29-msg-1"
+        },
+        {
+          "choose": "option-29-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-30"
+        },
+        {
+          "choose": "option-30-1"
+        }
+      ],
+      "ending": "慢慢来：你们保留联系，给彼此更多时间。",
+      "expectUnlocked": [
+        "scene-30"
+      ]
+    },
+    {
+      "name": "ending-2",
+      "steps": [
+        {
+          "event": "read",
+          "target": "stage-0-msg-1"
+        },
+        {
+          "choose": "option-0-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-1"
+        },
+        {
+          "choose": "option-1-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-2-msg-1"
+        },
+        {
+          "choose": "option-2-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-3"
+        },
+        {
+          "choose": "option-3-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-4"
+        },
+        {
+          "choose": "option-4-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-5"
+        },
+        {
+          "choose": "option-5-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-6-msg-1"
+        },
+        {
+          "choose": "option-6-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-7-msg-0"
+        },
+        {
+          "choose": "option-7-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-8-msg-2"
+        },
+        {
+          "choose": "option-8-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-9-msg-0"
+        },
+        {
+          "choose": "option-9-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-10-msg-1"
+        },
+        {
+          "choose": "option-10-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-11"
+        },
+        {
+          "choose": "option-11-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-12-msg-1"
+        },
+        {
+          "choose": "option-12-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-13"
+        },
+        {
+          "choose": "option-13-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-14-msg-1"
+        },
+        {
+          "choose": "option-14-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-15-msg-2"
+        },
+        {
+          "choose": "option-15-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-16-msg-1"
+        },
+        {
+          "choose": "option-16-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-17"
+        },
+        {
+          "choose": "option-17-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-18-msg-1"
+        },
+        {
+          "choose": "option-18-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-19-msg-1"
+        },
+        {
+          "choose": "option-19-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-20"
+        },
+        {
+          "choose": "option-20-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-21-msg-2"
+        },
+        {
+          "choose": "option-21-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-22-msg-1"
+        },
+        {
+          "choose": "option-22-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-23"
+        },
+        {
+          "choose": "option-23-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-24"
+        },
+        {
+          "choose": "option-24-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-25"
+        },
+        {
+          "choose": "option-25-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-26-msg-2"
+        },
+        {
+          "choose": "option-26-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-27-msg-1"
+        },
+        {
+          "choose": "option-27-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-28-msg-3"
+        },
+        {
+          "choose": "option-28-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-29-msg-1"
+        },
+        {
+          "choose": "option-29-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-30"
+        },
+        {
+          "choose": "option-30-2"
+        }
+      ],
+      "ending": "可靠的同事：你选择把这段关系留在清晰的工作边界内。",
+      "expectUnlocked": [
+        "scene-30"
+      ]
+    },
+    {
+      "name": "ending-3",
+      "steps": [
+        {
+          "event": "read",
+          "target": "stage-0-msg-1"
+        },
+        {
+          "choose": "option-0-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-1"
+        },
+        {
+          "choose": "option-1-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-2-msg-1"
+        },
+        {
+          "choose": "option-2-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-3"
+        },
+        {
+          "choose": "option-3-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-4"
+        },
+        {
+          "choose": "option-4-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-5"
+        },
+        {
+          "choose": "option-5-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-6-msg-1"
+        },
+        {
+          "choose": "option-6-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-7-msg-0"
+        },
+        {
+          "choose": "option-7-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-8-msg-2"
+        },
+        {
+          "choose": "option-8-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-9-msg-0"
+        },
+        {
+          "choose": "option-9-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-10-msg-1"
+        },
+        {
+          "choose": "option-10-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-11"
+        },
+        {
+          "choose": "option-11-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-12-msg-1"
+        },
+        {
+          "choose": "option-12-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-13"
+        },
+        {
+          "choose": "option-13-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-14-msg-1"
+        },
+        {
+          "choose": "option-14-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-15-msg-2"
+        },
+        {
+          "choose": "option-15-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-16-msg-1"
+        },
+        {
+          "choose": "option-16-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-17"
+        },
+        {
+          "choose": "option-17-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-18-msg-1"
+        },
+        {
+          "choose": "option-18-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-19-msg-1"
+        },
+        {
+          "choose": "option-19-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-20"
+        },
+        {
+          "choose": "option-20-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-21-msg-2"
+        },
+        {
+          "choose": "option-21-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-22-msg-1"
+        },
+        {
+          "choose": "option-22-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-23"
+        },
+        {
+          "choose": "option-23-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-24"
+        },
+        {
+          "choose": "option-24-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-25"
+        },
+        {
+          "choose": "option-25-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-26-msg-2"
+        },
+        {
+          "choose": "option-26-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-27-msg-1"
+        },
+        {
+          "choose": "option-27-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-28-msg-3"
+        },
+        {
+          "choose": "option-28-0"
+        },
+        {
+          "event": "read",
+          "target": "stage-29-msg-1"
+        },
+        {
+          "choose": "option-29-0"
+        },
+        {
+          "event": "read",
+          "target": "scene-30"
+        },
+        {
+          "choose": "option-30-3"
+        }
+      ],
+      "ending": "新的起点：你调整了工作方向，把以后的选择留给自己。",
+      "expectUnlocked": [
+        "scene-30"
+      ]
+    }
+  ]
 }

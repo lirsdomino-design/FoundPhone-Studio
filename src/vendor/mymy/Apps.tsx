@@ -314,6 +314,7 @@ export function MymyKakao(p: SkinProps) {
   );
 }
 export function MymyInstagram(p: SkinProps) {
+  const [refresh, setRefresh] = useState(0);
   const [tab, setTab] = useSkinState<string>(p, "mymyTab", "主页"),
     [liked, setLiked] = useSkinState<string[]>(p, "mymyLiked", []),
     [saved, setSaved] = useSkinState<string[]>(p, "mymySaved", []),
@@ -453,6 +454,13 @@ export function MymyInstagram(p: SkinProps) {
           {selected && post(selected)}
           {!selected && tab === "主页" && (
             <>
+              <button
+                className="story-feed-refresh"
+                aria-label="刷新Instagram动态"
+                onClick={() => setRefresh(refresh + 1)}
+              >
+                ↻ {refresh ? "已刷新 · 故事动态" : "刷新动态"}
+              </button>
               <div className="sts">
                 {stories.map((s, n) => (
                   <button
@@ -469,7 +477,7 @@ export function MymyInstagram(p: SkinProps) {
                   </button>
                 ))}
               </div>
-              {posts.map(post)}
+              {(refresh % 2 ? [...posts].reverse() : posts).map(post)}
               {!posts.length && <Blank />}
             </>
           )}
@@ -638,6 +646,7 @@ export function MymyInstagram(p: SkinProps) {
   );
 }
 export function MymyX(p: SkinProps) {
+  const [refresh, setRefresh] = useState(0);
   const [dark, setDark] = useSkinState<boolean>(p, "x-dark", true);
   const [tab, setTab] = useSkinState<string>(p, "mymyTab", "推荐"),
     [likes, setLikes] = useSkinState<string[]>(p, "mymyXLikes", []),
@@ -670,7 +679,7 @@ export function MymyX(p: SkinProps) {
           </button>
         </header>
         <div className="kzxtb">
-          {["为你推荐", "正在关注", "添加 +", "时间"].map((t) => (
+          {["为你推荐", "正在关注"].map((t) => (
             <button
               className={t === tab ? "on" : ""}
               key={t}
@@ -690,7 +699,15 @@ export function MymyX(p: SkinProps) {
           />
         )}
         <div className="kzxfd">
-          {p.items
+          <button
+            className="story-feed-refresh"
+            aria-label="刷新X动态"
+            onClick={() => setRefresh(refresh + 1)}
+          >
+            ↻ {refresh ? "已刷新 · 故事动态" : "刷新动态"}
+          </button>
+          {(refresh % 2 ? [...p.items].reverse() : p.items)
+            .filter((i) => tab !== "正在关注" || i.folder === "正在关注")
             .filter((i) => (i.title + i.body).includes(query))
             .map((i) => (
               <article className="kzxt" key={i.id}>
