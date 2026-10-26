@@ -45,4 +45,10 @@ describe("player personalization", () => {
       }),
     ).toBe(false);
   });
+  it('keeps the weekday in a choice consistent with the outgoing message',()=>{
+    const work=personalizeWork(source,{name:'宁',startDate:'2026-12-30',language:'both',passcode:''});
+    const choice=work.nodes.find(n=>n.id==='d0-main')!.actions.find(a=>a.type==='choice'&&a.key==='d0-main-reply-2');
+    expect(choice?.value).toBe('星期一还不能确定，晚一点告诉你。');
+    expect(work.data.kakao.find(i=>i.id==='line-30')?.body).toBe(choice?.value);
+  });
 });

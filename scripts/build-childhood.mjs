@@ -176,7 +176,7 @@ const script = {
 };
 const chars = ["伯贤", "允书", "珉澄", "知安"];
 // Fictional posts already on the phone before the playable timeline begins.
-script.content.instagram.push({id:"ig-seed-room",title:"允书",body:"休息室的灯换好了。明天记得从 B 口进，别在外面吹风 ☕",sender:"允书",time:"2026-10-25 18:40",kind:"post",folder:"正在关注",hidden:false,comments:["珉澄：收到，我会把交接表带过去。"],meta:{handle:"@yoonseo_story",fictional:"true"}});
+script.content.instagram.push({id:"ig-seed-room",title:"允书",body:"箱子还没拆完，灯也还没装好。{{weekdelta:5}}来吃饭，顺便拯救一下我的客厅 ☕",sender:"允书",time:"2026-10-25 18:40",kind:"post",folder:"正在关注",hidden:false,comments:["珉澄：所以吃饭之前先装灯是吗？"],meta:{handle:"@yoonseo_story",fictional:"true"}});
 script.content.twitter.push({id:"x-seed-work",title:"演出记录",body:"明天现场降温，候场区的热饮和备用围巾已经安排上了。辛苦每一位早到的人。",sender:"演出记录",time:"2026-10-25 20:12",kind:"post",folder:"正在关注",hidden:false,comments:["路过的粉丝：希望大家都别着凉。","另一位粉丝：天气预报说明天会很冷，注意保暖。"],meta:{handle:"@stage_note",fictional:"true"}});
 const v = (key, value) => ({ type: "variable", key, value });
 const unlock = (key) => ({ type: "unlock", key, value: true });
@@ -388,7 +388,7 @@ function stage(dayIndex, key, scene, first = false) {
     const choiceId = id + "-reply-" + i;
     const n = node(choiceId, o.text.replace(/［[^］]+］/g, ""));
     for (const p of pieces(o.text)) {
-      if (p.text) addChoice(start, choiceId, p.text, guards[p.tag] || []);
+      if (p.text) addChoice(start, choiceId, calendarize(p.text, date), guards[p.tag] || []);
     }
     const sendPlayer = !/只浏览|划走|展开|查看|看看|返回|进入|等他回|留在/.test(
       o.text,
@@ -1128,6 +1128,26 @@ if (roomMedia) {
   }
 }
 // End-to-end engine paths. Each step is an actual visible choice, including day transitions.
+const sceneImages = {
+  '2026-11-06': 'restaurant-table',
+  '2026-11-21': 'print-workspace',
+  '2026-11-26': 'print-workspace',
+  '2026-12-09': 'dinner',
+  '2026-12-12': 'home-shelf',
+  '2027-01-02': 'dinner',
+  '2027-01-06': 'home-shelf',
+  '2027-01-16': 'home-shelf',
+  '2027-02-01': 'print-workspace',
+  '2027-02-18': 'dinner',
+};
+for(const [date,asset] of Object.entries(sceneImages)){
+  const item=script.content.instagram.find(i=>i.time.startsWith(date));
+  const media=mediaFor(`stories/childhood/assets/${asset}.jpg`);
+  if(item && media){item.media=media;item.meta={...item.meta,alt:'原创AI虚构场景道具图，不是真人私照。'};}
+}
+const printPhoto=mediaFor('stories/childhood/assets/print-workspace.jpg');
+const printMessage=threads.get('珉澄')?.messages.find(i=>i.time.startsWith('2026-11-03')&&!i.outgoing);
+if(printPhoto && printMessage){printMessage.media=printPhoto;printMessage.kind='image';}
 for (const [relation, ending] of endings) {
   const choices = [];
   for (let i = 0; i < 122; i++) {
